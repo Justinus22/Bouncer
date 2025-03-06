@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 int main()
 {
@@ -12,6 +13,7 @@ int main()
             if (event->is<sf::Event::Closed>())
             {
                 window.close();
+                std::cout << "ending" << std::endl;
             }
         }
 
