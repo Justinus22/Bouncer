@@ -12,6 +12,8 @@ FetchContent_Declare(SFML
     SYSTEM)
 FetchContent_MakeAvailable(SFML)
 
-add_executable(Bouncer src/main.cpp)
+add_executable(Bouncer src/main.cpp src/Application.cpp src/GameState.cpp src/Button.cpp src/MainMenu.cpp src/Gameplay.cpp src/PlatformGenerator.cpp)
+
+target_include_directories(Bouncer PRIVATE include)
 target_compile_features(Bouncer PRIVATE cxx_std_17)
 target_link_libraries(Bouncer PRIVATE SFML::Graphics)
