@@ -6,6 +6,10 @@
 #include <queue>
 #include <list>
 #include "PlatformGenerator.hpp"
+#include "Bouncer.hpp"
+#include "Platform.hpp"
+#include <tuple>
+#include <optional>
 
 class Gameplay : public Scene
 {
@@ -17,7 +21,8 @@ public:
 
     enum class Action
     {
-        MOVE_RIGHT
+        MOVE_RIGHT,
+        MOVE_DOWN
     };
 
     std::queue<Action> &getGameActionQueue();
@@ -27,23 +32,33 @@ private:
     void removeUnseenPlatforms();
     void removeUnseenBackground();
     void addNewBackgroundIfNeeded();
+    /// @brief work through the actions queue and handle all actions from that queue and update state list the position of all the sprites accordingly
+    /// @param dt for fps independet movment
     void updateStateByActionsQueue(sf::Time dt);
     void moveSceneToRight(sf::Time dt);
+    /// @brief calculates where the ball needs to bounce or not and removes lifes from platforms
+    /// @return wether there is an intersection with platform beaneth the bouncer
+    std::optional<std::tuple<sf::FloatRect, Platform>> getBouncerIntersectionWithPlatformBelow();
+    void increaseScore();
 
-    std::list<sf::Sprite>
-        backgroundSprites;
+    std::list<sf::Sprite> backgroundSprites;
     sf::Texture backgroundTexture;
-    const float BACKGROUND_PX_MOVE_PER_SEC = 100.0f;
-    float PLATFORM_PX_MOVE_PER_SEC = 200.0f;
+    sf::Font font;
+    sf::Text scoreText;
+
+    int score;
+
+    const float BACKGROUND_PX_MOVE_PER_SEC = 200.0f;
+    float PLATFORM_PX_MOVE_PER_SEC = 600.0f;
 
     std::queue<Action>
         gameActions;
 
-    sf::Texture platformTexture;
-    sf::Texture platformSmallTexture;
-    std::list<sf::Sprite> platforms;
+    std::list<Platform> platforms;
 
     PlatformGenerator platformGenerator;
+
+    Bouncer bouncer;
 };
 
 #endif /* B7D363E8_A6EA_4B79_837A_9982B96EEE79 */

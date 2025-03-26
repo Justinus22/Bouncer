@@ -5,7 +5,7 @@
 Application::Application()
 {
     window = sf::RenderWindow(sf::VideoMode({constants::WINDOW_WIDTH, constants::WINDOW_HEIGHT}), "Bouncer", sf::State::Windowed);
-    window.setFramerateLimit(30);
+    window.setFramerateLimit(60);
 }
 
 Application::Application(const Application &app)

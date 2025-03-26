@@ -1,28 +1,49 @@
 #include "Gameplay.hpp"
 #include <iostream>
 #include "PlatformGenerator.hpp"
+#include <tuple>
+#include "constants.hpp"
 
-Gameplay::Gameplay() : platformGenerator(platformTexture, platformSmallTexture)
+Gameplay::Gameplay() : scoreText(font)
 {
+    score = 0;
+
     backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png");
     backgroundSprites.push_back(sf::Sprite(backgroundTexture));
 
-    platformTexture.loadFromFile("assets/textures/platforms/ground_grass.png");
-    platformSmallTexture.loadFromFile("assets/textures/platforms/ground_grass_small.png");
+    platformGenerator = PlatformGenerator();
+    this->platforms = platformGenerator.initPlatforms();
+    platformGenerator.generateDistanceToNextPlatform();
 
-    platformGenerator = PlatformGenerator(platformTexture, platformSmallTexture);
-    platformGenerator.initPlatforms(platforms);
+    font.openFromFile("assets/fonts/arial.ttf");
+
+    scoreText.setFillColor(sf::Color::Black);
+    scoreText.setCharacterSize(40);
+    scoreText.setPosition({constants::WINDOW_WIDTH - 50, 20});
+    scoreText.setString(std::to_string(score));
 }
 
 void Gameplay::update(sf::Time dt)
 {
-    updateStateByActionsQueue(dt);
+
+    this->updateStateByActionsQueue(dt);
     if (platformGenerator.shouldGenerateNextPlatform(platforms))
     {
         platformGenerator.generateNextPlatform(platforms);
+        platformGenerator.generateDistanceToNextPlatform();
     }
-    addNewBackgroundIfNeeded();
-    removeUnseenSprites();
+
+    bouncer.update(dt);
+    if (std::optional<std::tuple<sf::FloatRect, Platform>> intersectionData = this->getBouncerIntersectionWithPlatformBelow())
+    {
+        bouncer.updateAccordingToIntersection(std::get<sf::FloatRect>(*intersectionData), dt);
+        Platform intersectedPlatform = std::get<Platform>(*intersectionData);
+        intersectedPlatform.removeHealth();
+        this->increaseScore();
+    }
+
+    this->addNewBackgroundIfNeeded();
+    this->removeUnseenSprites();
 }
 
 void Gameplay::render(sf::RenderWindow &window)
@@ -31,10 +52,15 @@ void Gameplay::render(sf::RenderWindow &window)
     {
         window.draw(backgroundSprite);
     }
-    for (sf::Sprite platform : platforms)
+
+    window.draw(scoreText);
+
+    for (Platform platform : platforms)
     {
-        window.draw(platform);
+        platform.render(window);
     }
+
+    bouncer.render(window);
 }
 
 void Gameplay::handleEvents(sf::RenderWindow &window)
@@ -49,6 +75,8 @@ void Gameplay::handleEvents(sf::RenderWindow &window)
         {
             if (keyPressed->scancode == sf::Keyboard::Scancode::Right)
                 gameActions.push(Gameplay::Action::MOVE_RIGHT);
+            if (keyPressed->scancode == sf::Keyboard::Scancode::Down)
+                gameActions.push(Gameplay::Action::MOVE_DOWN);
         }
     }
 }
@@ -64,10 +92,10 @@ void Gameplay::removeUnseenPlatforms()
     auto i = platforms.begin();
     while (i != platforms.end())
     {
-        if (i->getGlobalBounds().position.x + i->getGlobalBounds().size.x < 0)
+        if (i->getSprite().getGlobalBounds().position.x + i->getSprite().getGlobalBounds().size.x < 0)
         {
             {
-                i = backgroundSprites.erase(i);
+                i = platforms.erase(i);
                 continue;
             }
         }
@@ -112,6 +140,9 @@ void Gameplay::updateStateByActionsQueue(sf::Time dt)
         case Gameplay::Action::MOVE_RIGHT:
             moveSceneToRight(dt);
             break;
+        case Gameplay::Action::MOVE_DOWN:
+            bouncer.addExtraAcceleration();
+            break;
         default:
             break;
         }
@@ -124,8 +155,33 @@ void Gameplay::moveSceneToRight(sf::Time dt)
     {
         backgroundSprite.setPosition({backgroundSprite.getPosition().x - BACKGROUND_PX_MOVE_PER_SEC * dt.asSeconds(), 0});
     }
-    for (sf::Sprite &platform : platforms)
+    for (Platform &platform : platforms)
     {
-        platform.setPosition({platform.getPosition().x - PLATFORM_PX_MOVE_PER_SEC * dt.asSeconds(), platform.getPosition().y});
+        platform.getSprite().setPosition({platform.getSprite().getPosition().x - PLATFORM_PX_MOVE_PER_SEC * dt.asSeconds(), platform.getSprite().getPosition().y});
     }
+}
+
+std::optional<std::tuple<sf::FloatRect, Platform>> Gameplay::getBouncerIntersectionWithPlatformBelow()
+{
+    auto platformIterator = platforms.begin();
+    while (platformIterator != platforms.end())
+    {
+        if (platformIterator->getSprite().getGlobalBounds().findIntersection(bouncer.getGlobalBounds()))
+        {
+            if (!platformIterator->removeHealth())
+            {
+                platformIterator = platforms.erase(platformIterator);
+            }
+
+            return std::tuple(bouncer.getGlobalBounds(), *platformIterator);
+        }
+        platformIterator++;
+    }
+    return {};
+}
+
+void Gameplay::increaseScore()
+{
+    score++;
+    scoreText.setString(std::to_string(score));
 }

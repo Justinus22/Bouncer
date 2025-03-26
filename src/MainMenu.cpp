@@ -7,9 +7,9 @@ MainMenu::MainMenu() : playButton({512, 500}, {110, 50}, font, "Play"),
                        backgroundSprite(backgroundTexture),
                        title(font, "Bouncer")
 {
-
     font.openFromFile("assets/fonts/arial.ttf");
     backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png");
+
     backgroundSprite = sf::Sprite(backgroundTexture);
 
     title.setFillColor(sf::Color::Black);
@@ -19,8 +19,7 @@ MainMenu::MainMenu() : playButton({512, 500}, {110, 50}, font, "Play"),
 
 void MainMenu::update(sf::Time dt)
 {
-    // Update logic here if needed
-    action = Action::None; // Reset action
+    action = Action::None;
 }
 
 void MainMenu::render(sf::RenderWindow &window)
