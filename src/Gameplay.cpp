@@ -3,6 +3,7 @@
 #include "PlatformGenerator.hpp"
 #include <tuple>
 #include "constants.hpp"
+#include <stdbool.h>
 
 Gameplay::Gameplay() : scoreText(font)
 {
@@ -42,6 +43,11 @@ void Gameplay::update(sf::Time dt)
         this->increaseScore();
     }
 
+    if (bouncer.getGlobalBounds().position.y + bouncer.getGlobalBounds().size.y > constants::WINDOW_HEIGHT)
+    {
+        this->gameover = true;
+    }
+
     this->addNewBackgroundIfNeeded();
     this->removeUnseenSprites();
 }
@@ -79,6 +85,16 @@ void Gameplay::handleEvents(sf::RenderWindow &window)
                 gameActions.push(Gameplay::Action::MOVE_DOWN);
         }
     }
+}
+
+bool Gameplay::isGameover()
+{
+    return this->gameover;
+}
+
+int Gameplay::getScore()
+{
+    return this->score;
 }
 
 void Gameplay::removeUnseenSprites()

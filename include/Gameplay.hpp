@@ -25,6 +25,9 @@ public:
         MOVE_DOWN
     };
 
+    bool isGameover();
+    int getScore();
+
     std::queue<Action> &getGameActionQueue();
 
 private:
@@ -46,8 +49,6 @@ private:
     sf::Font font;
     sf::Text scoreText;
 
-    int score;
-
     const float BACKGROUND_PX_MOVE_PER_SEC = 200.0f;
     float PLATFORM_PX_MOVE_PER_SEC = 600.0f;
 
@@ -59,6 +60,10 @@ private:
     PlatformGenerator platformGenerator;
 
     Bouncer bouncer;
+
+    int score;
+
+    bool gameover;
 };
 
 #endif /* B7D363E8_A6EA_4B79_837A_9982B96EEE79 */

@@ -1,9 +1,10 @@
 #include "GameState.hpp"
 #include "MainMenu.hpp"
 #include <iostream>
-#include <Gameplay.hpp>
+#include "Gameplay.hpp"
+#include "GameOver.hpp"
 
-GameState::GameState() : currentScene(std::make_shared<MainMenu>()) {}
+GameState::GameState() : currentScene(std::make_shared<GameOver>(0)) {}
 
 void GameState::setScene(std::shared_ptr<Scene> newScene)
 {
@@ -17,6 +18,17 @@ void GameState::update(sf::Time dt)
         if (std::shared_ptr<MainMenu> mainMenu = std::dynamic_pointer_cast<MainMenu>(currentScene))
         {
             handleMainMenuAction(mainMenu->getAction());
+        }
+        if (std::shared_ptr<GameOver> gameOver = std::dynamic_pointer_cast<GameOver>(currentScene))
+        {
+            handleGameOverAction(gameOver->getAction());
+        }
+        if (std::shared_ptr<Gameplay> gameplay = std::dynamic_pointer_cast<Gameplay>(currentScene))
+        {
+            if (gameplay->isGameover())
+            {
+                setScene(std::make_shared<GameOver>(gameplay->getScore()));
+            }
         }
         currentScene->update(dt);
     }
@@ -43,9 +55,18 @@ void GameState::handleMainMenuAction(MainMenu::Action action)
     case MainMenu::Action::Play:
         setScene(std::make_shared<Gameplay>());
         break;
-    case MainMenu::Action::Exit:
+    default:
         break;
-    case MainMenu::Action::None:
+    }
+}
+
+void GameState::handleGameOverAction(GameOver::Action action)
+{
+    switch (action)
+    {
+    case GameOver::Action::CONTINUE:
+        setScene(std::make_shared<MainMenu>());
+        break;
     default:
         break;
     }

@@ -2,6 +2,7 @@
 #include <memory>
 #include "Scene.hpp"
 #include "MainMenu.hpp"
+#include "GameOver.hpp"
 
 class GameState
 {
@@ -11,8 +12,10 @@ public:
     void update(sf::Time dt);
     void render(sf::RenderWindow &window);
     void handleEvents(sf::RenderWindow &window);
-    void handleMainMenuAction(MainMenu::Action action);
     std::shared_ptr<Scene> getCurrentScene();
+
+    void handleMainMenuAction(MainMenu::Action action);
+    void handleGameOverAction(GameOver::Action action);
 
 private:
     std::shared_ptr<Scene> currentScene;

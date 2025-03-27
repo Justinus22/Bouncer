@@ -78,7 +78,3 @@ Button MainMenu::getExitButton()
 {
     return this->exitButton;
 }
-
-void handleEvents(sf::RenderWindow &window)
-{
-}
