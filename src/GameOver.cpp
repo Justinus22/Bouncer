@@ -1,4 +1,5 @@
 #include "GameOver.hpp"
+#include <iostream>
 
 GameOver::GameOver(int score) : continueButton({512, 500}, {150, 50}, font, "Continue"),
                                 action(Action::NONE),
@@ -6,8 +7,15 @@ GameOver::GameOver(int score) : continueButton({512, 500}, {150, 50}, font, "Con
                                 gameOverText(font, "Game Over!"),
                                 scoreText(font, "Score: " + std::to_string(score))
 {
-    font.openFromFile("assets/fonts/arial.ttf");
-    backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png");
+
+    if (!font.openFromFile("assets/fonts/arial.ttf"))
+    {
+        std::cout << "Error loading font" << std::endl;
+    }
+    if (!backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png"))
+    {
+        std::cout << "Error loading background texture" << std::endl;
+    }
 
     backgroundSprite = sf::Sprite(backgroundTexture);
 

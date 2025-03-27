@@ -25,9 +25,18 @@ public:
 
 private:
     sf::Font font;
-    sf::Sprite backgroundSprite;
-    sf::Texture backgroundTexture;
     sf::Text title;
+    sf::Text accelerateInstructionText;
+    sf::Text moveInstructionText;
+
+    sf::Texture accelerateInstructionTexture;
+    sf::Sprite accelerateInstructionSprite;
+
+    sf::Texture moveInstructionTexture;
+    sf::Sprite moveInstructionSprite;
+
+    sf::Texture backgroundTexture;
+    sf::Sprite backgroundSprite;
 
     Button playButton;
     Button exitButton;

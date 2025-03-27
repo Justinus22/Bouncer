@@ -9,14 +9,20 @@ Gameplay::Gameplay() : scoreText(font)
 {
     score = 0;
 
-    backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png");
+    if (!backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png"))
+    {
+        std::cout << "Error loading background texture in gameplay." << std::endl;
+    }
     backgroundSprites.push_back(sf::Sprite(backgroundTexture));
 
     platformGenerator = PlatformGenerator();
     this->platforms = platformGenerator.initPlatforms();
     platformGenerator.generateDistanceToNextPlatform();
 
-    font.openFromFile("assets/fonts/arial.ttf");
+    if (!font.openFromFile("assets/fonts/arial.ttf"))
+    {
+        std::cout << "Error loading font" << std::endl;
+    }
 
     scoreText.setFillColor(sf::Color::Black);
     scoreText.setCharacterSize(40);

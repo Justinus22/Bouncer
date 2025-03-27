@@ -4,7 +4,7 @@
 #include "Gameplay.hpp"
 #include "GameOver.hpp"
 
-GameState::GameState() : currentScene(std::make_shared<GameOver>(0)) {}
+GameState::GameState() : currentScene(std::make_shared<MainMenu>()) {}
 
 void GameState::setScene(std::shared_ptr<Scene> newScene)
 {
