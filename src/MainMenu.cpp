@@ -1,40 +1,19 @@
 #include "MainMenu.hpp"
 #include <iostream>
 
-MainMenu::MainMenu() : playButton({512, 500}, {110, 50}, font, "Play"),
-                       exitButton({512, 600}, {110, 50}, font, "Exit"),
-                       action(Action::None),
-                       backgroundSprite(backgroundTexture),
-                       accelerateInstructionSprite(accelerateInstructionTexture),
-                       moveInstructionSprite(moveInstructionTexture),
-                       title(font, "Bouncer"),
-                       accelerateInstructionText(font, "accelerate down"),
-                       moveInstructionText(font, "move right")
+MainMenu::MainMenu(AssetManager &assetManager) : playButton(assetManager, {512, 500}, {110, 50}, "Play"),
+                                                 exitButton(assetManager, {512, 600}, {110, 50}, "Exit"),
+                                                 backgroundSprite(assetManager.getBackgroundTexture()),
+                                                 accelerateInstructionSprite(assetManager.getAccelerateInstructionTexture()),
+                                                 moveInstructionSprite(assetManager.getMoveInstructionTexture()),
+                                                 title(assetManager.getFont(), "Bouncer"),
+                                                 accelerateInstructionText(assetManager.getFont(), "accelerate down"),
+                                                 moveInstructionText(assetManager.getFont(), "move right")
 
 {
-    if (!font.openFromFile("assets/fonts/arial.ttf"))
-    {
-        std::cout << "Error loading font" << std::endl;
-    }
-    if (!backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png"))
-    {
-        std::cout << "Error loading background texture." << std::endl;
-    }
-    if (!accelerateInstructionTexture.loadFromFile("assets/textures/instructions/keyboard_arrow_down_outline.png"))
-    {
-        std::cout << "Error loading accelerate instruction texture." << std::endl;
-    }
-    if (!moveInstructionTexture.loadFromFile("assets/textures/instructions/keyboard_arrow_right_outline.png"))
-    {
-        std::cout << "Error loading move instruction texture." << std::endl;
-    }
 
-    backgroundSprite = sf::Sprite(backgroundTexture);
-
-    accelerateInstructionSprite = sf::Sprite(accelerateInstructionTexture);
     accelerateInstructionSprite.setPosition({140, 680});
 
-    moveInstructionSprite = sf::Sprite(moveInstructionTexture);
     moveInstructionSprite.setPosition({885, 680});
 
     title.setFillColor(sf::Color::Black);
@@ -48,11 +27,12 @@ MainMenu::MainMenu() : playButton({512, 500}, {110, 50}, font, "Play"),
     moveInstructionText.setFillColor(sf::Color::White);
     moveInstructionText.setCharacterSize(20);
     moveInstructionText.setPosition({870, 750});
+
+    this->action = Action::None;
 }
 
 void MainMenu::update(sf::Time dt)
 {
-    action = Action::None;
 }
 
 void MainMenu::render(sf::RenderWindow &window)
@@ -88,7 +68,6 @@ void MainMenu::handleEvents(sf::RenderWindow &window)
                 }
                 else if (this->getExitButton().isClicked(mousePos))
                 {
-                    this->setAction(MainMenu::Action::Exit);
                     window.close();
                 }
             }

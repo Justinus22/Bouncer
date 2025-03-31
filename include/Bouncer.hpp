@@ -2,11 +2,12 @@
 #define B060A7F6_8C30_44E3_9398_49BFAE3DAD7F
 
 #include <SFML/Graphics.hpp>
+#include <AssetManager.hpp>
 
 class Bouncer
 {
 public:
-    Bouncer();
+    Bouncer(AssetManager &assetManager);
     void render(sf::RenderWindow &window);
     void update(sf::Time dt);
     void updateAccordingToIntersection(sf::FloatRect intersection, sf::Time dt);
@@ -18,11 +19,7 @@ public:
     constexpr static float BOUNCE_FRICTION_SPEED_REDUCTION_FACTOR = 0.1f;
 
 private:
-    sf::Texture ballTexture;
     sf::Sprite ballSprite;
-
-    sf::Texture faceTexture;
-    sf::Texture faceSquishedTexture;
     sf::Sprite faceSprite;
 
     sf::Vector2f position;

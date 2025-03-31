@@ -3,13 +3,14 @@
 #include <SFML/Graphics.hpp>
 #include <list>
 #include "Platform.hpp"
+#include "AssetManager.hpp"
 
 class PlatformGenerator
 {
 public:
-    void generateNextPlatform(std::list<Platform> &platforms);
+    void generateNextPlatform(AssetManager &assetManager, std::list<Platform> &platforms);
     bool shouldGenerateNextPlatform(std::list<Platform> platforms);
-    std::list<Platform> initPlatforms();
+    std::list<Platform> initPlatforms(AssetManager &assetManager);
     void generateDistanceToNextPlatform();
 
 private:

@@ -2,15 +2,14 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <string>
+#include <AssetManager.hpp>
 
-Button::Button(const sf::Vector2f &position, const sf::Vector2f &size, const sf::Font &font, const std::string &textString)
-    : sprite(texture),
-      text(font, textString, 24)
+Button::Button(AssetManager &assetManager, const sf::Vector2f &position, const sf::Vector2f &size, const std::string &textString)
+    : sprite(assetManager.getButtonTexture()),
+      text(assetManager.getFont(), textString, 24)
 {
-    texture.loadFromFile("assets/textures/buttons/woodenTile.png");
-    sprite = sf::Sprite(texture);
 
-    sf::Vector2f factors({size.x / texture.getSize().x, size.y / texture.getSize().y});
+    sf::Vector2f factors({size.x / assetManager.getButtonTexture().getSize().x, size.y / assetManager.getButtonTexture().getSize().y});
     sprite.setScale(factors);
     sf::Vector2f spritePos({position.x - size.x / 2, position.y - size.y / 2});
     sprite.setPosition(spritePos);

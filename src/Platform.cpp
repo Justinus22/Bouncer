@@ -1,39 +1,17 @@
 #include "Platform.hpp"
 #include <iostream>
+#include "AssetManager.hpp"
 
-Platform::Platform() : sprite(platformTexture)
+Platform::Platform(AssetManager &assetManager) : assetManager(assetManager), sprite(assetManager.getPlatformTexture())
 {
-    if (!platformTexture.loadFromFile("assets/textures/platforms/ground_grass.png"))
-    {
-        std::cout << "Error loading ground grass texture;" << std::endl;
-    }
-    if (!platformSmallTexture.loadFromFile("assets/textures/platforms/ground_grass_small.png"))
-    {
-        std::cout << "Error loading ground grass small texture;" << std::endl;
-    }
-    if (!platformBrokenTexture.loadFromFile("assets/textures/platforms/ground_grass_broken.png"))
-    {
-        std::cout << "Error loading ground grass brokentexture;" << std::endl;
-    }
-    if (!platformSmallBrokenTexture.loadFromFile("assets/textures/platforms/ground_grass_small_broken.png"))
-    {
-        std::cout << "Error loading ground grass small and broken texture;" << std::endl;
-    }
-
-    sprite = sf::Sprite(platformTexture);
     size = Platform::Size::BIG;
     lifes = MAX_LIFE;
 }
 
-Platform::Platform(const Platform &oPlatform) : sprite(platformTexture)
+Platform::Platform(const Platform &oPlatform) : assetManager(oPlatform.assetManager), sprite(assetManager.getPlatformTexture())
 {
     lifes = oPlatform.lifes;
-    platformTexture = oPlatform.platformTexture;
-    platformSmallTexture = oPlatform.platformSmallTexture;
-    platformBrokenTexture = oPlatform.platformBrokenTexture;
-    platformSmallBrokenTexture = oPlatform.platformSmallBrokenTexture;
     size = oPlatform.size;
-
     sprite = generateNewSpriteFromPlatformData(oPlatform.sprite.getPosition(), oPlatform.lifes, oPlatform.size);
 }
 
@@ -72,28 +50,28 @@ void Platform::setSize(Platform::Size size)
 
 sf::Sprite Platform::generateNewSpriteFromPlatformData(sf::Vector2f pos, int lifes, Size size)
 {
-    sf::Sprite sprite(platformTexture);
+    sf::Sprite sprite(assetManager.getPlatformTexture());
     switch (size)
     {
     case Platform::Size::BIG:
         if (lifes <= 1)
         {
-            sprite = sf::Sprite(platformBrokenTexture);
+            sprite = sf::Sprite(assetManager.getPlatformBrokenTexture());
         }
         else
         {
-            sprite = sf::Sprite(platformTexture);
+            sprite = sf::Sprite(assetManager.getPlatformTexture());
         }
 
         break;
     case Platform::Size::SMALL:
         if (lifes <= 1)
         {
-            sprite = sf::Sprite(platformSmallBrokenTexture);
+            sprite = sf::Sprite(assetManager.getPlatformSmallBrokenTexture());
         }
         else
         {
-            sprite = sf::Sprite(platformSmallTexture);
+            sprite = sf::Sprite(assetManager.getPlatformSmallTexture());
         }
         break;
     default:

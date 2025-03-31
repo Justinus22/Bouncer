@@ -3,10 +3,11 @@
 #include <constants.hpp>
 #include <random>
 #include <iostream>
+#include "AssetManager.hpp"
 
-void PlatformGenerator::generateNextPlatform(std::list<Platform> &platforms)
+void PlatformGenerator::generateNextPlatform(AssetManager &assetManager, std::list<Platform> &platforms)
 {
-    Platform newPlatform;
+    Platform newPlatform(assetManager);
 
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -40,16 +41,16 @@ bool PlatformGenerator::shouldGenerateNextPlatform(std::list<Platform> platforms
            distanceToNextPlatform;
 }
 
-std::list<Platform> PlatformGenerator::initPlatforms()
+std::list<Platform> PlatformGenerator::initPlatforms(AssetManager &assetManager)
 {
     std::list<Platform> platforms;
 
-    Platform landingPlatform;
+    Platform landingPlatform(assetManager);
     landingPlatform.getSprite()
         .setPosition({200, 600});
     landingPlatform.setSize(Platform::Size::BIG);
 
-    Platform starterPlatform;
+    Platform starterPlatform(assetManager);
     starterPlatform.getSprite().setPosition({700, 500});
     starterPlatform.setSize(Platform::Size::BIG);
 

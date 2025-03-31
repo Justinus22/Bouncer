@@ -18,5 +18,7 @@ public:
     void handleGameOverAction(GameOver::Action action);
 
 private:
+    AssetManager assetManager;
+
     std::shared_ptr<Scene> currentScene;
 };

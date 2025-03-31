@@ -7,15 +7,14 @@
 class MainMenu : public Scene
 {
 public:
-    MainMenu();
+    MainMenu(AssetManager &assetManager);
     void update(sf::Time dt) override;
     void handleEvents(sf::RenderWindow &window) override;
     void render(sf::RenderWindow &window) override;
     enum class Action
     {
-        None,
         Play,
-        Exit
+        None
     };
     Action getAction() const;
     void setAction(Action newAction);
@@ -24,18 +23,13 @@ public:
     Button getExitButton();
 
 private:
-    sf::Font font;
     sf::Text title;
     sf::Text accelerateInstructionText;
     sf::Text moveInstructionText;
 
-    sf::Texture accelerateInstructionTexture;
     sf::Sprite accelerateInstructionSprite;
-
-    sf::Texture moveInstructionTexture;
     sf::Sprite moveInstructionSprite;
 
-    sf::Texture backgroundTexture;
     sf::Sprite backgroundSprite;
 
     Button playButton;

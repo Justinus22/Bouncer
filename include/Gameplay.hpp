@@ -10,11 +10,13 @@
 #include "Platform.hpp"
 #include <tuple>
 #include <optional>
+#include "AssetManager.hpp"
 
 class Gameplay : public Scene
 {
 public:
-    Gameplay();
+    Gameplay(AssetManager &assetManager);
+    ~Gameplay();
     void update(sf::Time dt) override;
     void render(sf::RenderWindow &window) override;
     void handleEvents(sf::RenderWindow &window) override;
@@ -44,8 +46,9 @@ private:
     std::optional<std::tuple<sf::FloatRect, Platform>> getBouncerIntersectionWithPlatformBelow();
     void increaseScore();
 
+    AssetManager &assetManager;
+
     std::list<sf::Sprite> backgroundSprites;
-    sf::Texture backgroundTexture;
     sf::Font font;
     sf::Text scoreText;
 

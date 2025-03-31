@@ -1,24 +1,12 @@
 #include "GameOver.hpp"
 #include <iostream>
+#include "AssetManager.hpp"
 
-GameOver::GameOver(int score) : continueButton({512, 500}, {150, 50}, font, "Continue"),
-                                action(Action::NONE),
-                                backgroundSprite(backgroundTexture),
-                                gameOverText(font, "Game Over!"),
-                                scoreText(font, "Score: " + std::to_string(score))
+GameOver::GameOver(AssetManager &assetManager, int score) : continueButton(assetManager, {512, 500}, {150, 50}, "Continue"),
+                                                            backgroundSprite(assetManager.getBackgroundTexture()),
+                                                            gameOverText(assetManager.getFont(), "Game Over!"),
+                                                            scoreText(assetManager.getFont(), "Score: " + std::to_string(score))
 {
-
-    if (!font.openFromFile("assets/fonts/arial.ttf"))
-    {
-        std::cout << "Error loading font" << std::endl;
-    }
-    if (!backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png"))
-    {
-        std::cout << "Error loading background texture" << std::endl;
-    }
-
-    backgroundSprite = sf::Sprite(backgroundTexture);
-
     gameOverText.setFillColor(sf::Color::Black);
     gameOverText.setCharacterSize(80);
     gameOverText.setPosition({300, 200});
@@ -26,11 +14,12 @@ GameOver::GameOver(int score) : continueButton({512, 500}, {150, 50}, font, "Con
     scoreText.setFillColor(sf::Color::Black);
     scoreText.setCharacterSize(50);
     scoreText.setPosition({410, 350});
+
+    this->action = Action::None;
 }
 
 void GameOver::update(sf::Time dt)
 {
-    action = Action::NONE;
 }
 
 void GameOver::render(sf::RenderWindow &window)
@@ -57,7 +46,7 @@ void GameOver::handleEvents(sf::RenderWindow &window)
                 sf::Vector2f mousePos = window.mapPixelToCoords(sf::Mouse::getPosition(window));
                 if (this->continueButton.isClicked(mousePos))
                 {
-                    this->setAction(GameOver::Action::CONTINUE);
+                    this->setAction(GameOver::Action::Continue);
                 }
             }
         }

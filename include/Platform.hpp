@@ -2,11 +2,12 @@
 #define F99B2B25_00DC_49C1_AFC0_8206FC561409
 
 #include <SFML/Graphics.hpp>
+#include "AssetManager.hpp"
 
 class Platform
 {
 public:
-    Platform();
+    Platform(AssetManager &assetManager);
     Platform(const Platform &platform);
     sf::Sprite &getSprite();
     void setSprite(sf::Sprite sprite);
@@ -33,10 +34,7 @@ private:
     /// @return new sprite
     sf::Sprite generateNewSpriteFromPlatformData(sf::Vector2f pos, int lifes, Size size);
 
-    sf::Texture platformTexture;
-    sf::Texture platformSmallTexture;
-    sf::Texture platformBrokenTexture;
-    sf::Texture platformSmallBrokenTexture;
+    AssetManager &assetManager;
 
     sf::Sprite sprite;
 

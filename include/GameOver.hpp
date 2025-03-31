@@ -8,24 +8,22 @@
 class GameOver : public Scene
 {
 public:
-    GameOver(int score);
+    GameOver(AssetManager &assetManager, int score);
     void update(sf::Time dt) override;
     void handleEvents(sf::RenderWindow &window) override;
     void render(sf::RenderWindow &window) override;
     enum class Action
     {
-        CONTINUE,
-        NONE
+        Continue,
+        None
     };
     Action getAction() const;
     void setAction(Action newAction);
 
 private:
-    sf::Font font;
     sf::Text gameOverText;
     sf::Text scoreText;
     sf::Sprite backgroundSprite;
-    sf::Texture backgroundTexture;
 
     Button continueButton;
 

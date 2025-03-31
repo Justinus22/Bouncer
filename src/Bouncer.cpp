@@ -1,16 +1,10 @@
 #include "Bouncer.hpp"
 #include <iostream>
+#include "AssetManager.hpp"
 
-Bouncer::Bouncer() : ballSprite(ballTexture),
-                     faceSprite(faceTexture)
+Bouncer::Bouncer(AssetManager &assetManager) : ballSprite(assetManager.getBallTexture()),
+                                               faceSprite(assetManager.getFaceTexture())
 {
-    ballTexture.loadFromFile("assets/textures/character/red_body_circle.png");
-    faceTexture.loadFromFile("assets/textures/character/face_a.png");
-    faceSquishedTexture.loadFromFile("assets/textures/character/face_c.png");
-
-    ballSprite = sf::Sprite(ballTexture);
-    faceSprite = sf::Sprite(faceTexture);
-
     position = sf::Vector2f({BOUNCER_HORIZONTAL_POSITION, 200});
     speed = 0;
     acceleration = 0;

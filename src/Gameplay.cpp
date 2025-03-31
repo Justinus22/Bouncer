@@ -4,30 +4,26 @@
 #include <tuple>
 #include "constants.hpp"
 #include <stdbool.h>
+#include "AssetManager.hpp"
 
-Gameplay::Gameplay() : scoreText(font)
+Gameplay::Gameplay(AssetManager &assetManager) : assetManager(assetManager), scoreText(assetManager.getFont()), bouncer(assetManager)
 {
     score = 0;
-
-    if (!backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png"))
-    {
-        std::cout << "Error loading background texture in gameplay." << std::endl;
-    }
-    backgroundSprites.push_back(sf::Sprite(backgroundTexture));
+    gameover = false;
+    backgroundSprites.push_back(sf::Sprite(assetManager.getBackgroundTexture()));
 
     platformGenerator = PlatformGenerator();
-    this->platforms = platformGenerator.initPlatforms();
+    this->platforms = platformGenerator.initPlatforms(assetManager);
     platformGenerator.generateDistanceToNextPlatform();
-
-    if (!font.openFromFile("assets/fonts/arial.ttf"))
-    {
-        std::cout << "Error loading font" << std::endl;
-    }
 
     scoreText.setFillColor(sf::Color::Black);
     scoreText.setCharacterSize(40);
     scoreText.setPosition({constants::WINDOW_WIDTH - 50, 20});
     scoreText.setString(std::to_string(score));
+}
+
+Gameplay::~Gameplay()
+{
 }
 
 void Gameplay::update(sf::Time dt)
@@ -36,7 +32,7 @@ void Gameplay::update(sf::Time dt)
     this->updateStateByActionsQueue(dt);
     if (platformGenerator.shouldGenerateNextPlatform(platforms))
     {
-        platformGenerator.generateNextPlatform(platforms);
+        platformGenerator.generateNextPlatform(assetManager, platforms);
         platformGenerator.generateDistanceToNextPlatform();
     }
 
@@ -146,7 +142,7 @@ void Gameplay::addNewBackgroundIfNeeded()
     const float backPosX = backgroundSprites.back().getGlobalBounds().position.x + backgroundSprites.back().getGlobalBounds().size.x;
     if (backPosX < 1200)
     {
-        backgroundSprites.push_back(sf::Sprite(backgroundTexture));
+        backgroundSprites.push_back(sf::Sprite(assetManager.getBackgroundTexture()));
         backgroundSprites.back().setPosition({backPosX, 0});
     }
 }
