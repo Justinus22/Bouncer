@@ -1,0 +1,17 @@
+<map id="include/Platform.hpp" name="include/Platform.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="162,5,303,31"/>
+<area shape="rect" id="Node000002" href="$_gameplay_8hpp.html" title=" " alt="" coords="34,153,183,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,40,148,57,124,81,115,98,111,118,110,153,105,152,106,117,110,96,120,77,145,52,176,35"/>
+<area shape="rect" id="Node000005" href="$_platform_generator_8hpp.html" title=" " alt="" coords="134,79,331,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="235,46,235,79,230,79,230,46"/>
+<area shape="rect" id="Node000007" href="$_platform_8cpp.html" title=" " alt="" coords="355,79,472,105"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="278,35,384,76,382,81,277,40"/>
+<area shape="rect" id="Node000003" href="$_game_state_8cpp.html" title=" " alt="" coords="5,226,140,252"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,193,81,227,76,225,93,191"/>
+<area shape="rect" id="Node000004" href="$_gameplay_8cpp.html" title=" " alt="" coords="163,226,288,252"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="142,184,207,223,204,228,140,189"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="200,115,131,154,128,150,197,110"/>
+<area shape="poly" id="edge6_Node000005_Node000004" title=" " alt="" coords="234,120,229,226,224,226,229,120"/>
+<area shape="rect" id="Node000006" href="$_platform_generator_8cpp.html" title=" " alt="" coords="263,153,436,178"/>
+<area shape="poly" id="edge7_Node000005_Node000006" title=" " alt="" coords="266,111,331,150,328,154,264,115"/>
+</map>

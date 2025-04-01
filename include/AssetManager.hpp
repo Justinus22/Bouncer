@@ -4,12 +4,15 @@
 #include <map>
 #include <string>
 
+/// @brief centraly manage all assest and themes
 class AssetManager
 {
 public:
     AssetManager();
 
+    /// @brief load needed textures from disk
     void loadTextures();
+    /// @brief update the current theme for the manager
     void randomlyUpdateTheme();
 
     sf::Font &getFont();
@@ -47,6 +50,7 @@ private:
     sf::Texture accelerateInstructionTexture;
     sf::Texture moveInstructionTexture;
 
+    /// @brief themes are the look and feel for a scene
     enum Theme
     {
         GRASS,
@@ -55,8 +59,10 @@ private:
         DESERT
     };
 
+    /// @brief map the theme to the according path to the asset from that theme
     static const std::map<Theme, std::string> THEME_TO_BACKGROUND_PATH_MAP;
 
+    /// @brief what theme is currently set
     Theme currentTheme;
 };
 #endif /* C5A3A3AE_51C7_42D6_8B16_AE07C038C32C */

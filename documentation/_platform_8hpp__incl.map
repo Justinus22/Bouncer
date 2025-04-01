@@ -1,0 +1,12 @@
+<map id="include/Platform.hpp" name="include/Platform.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="61,5,202,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,153,143,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,32,87,139,82,137,124,30"/>
+<area shape="rect" id="Node000003" href="$_asset_manager_8hpp.html" title=" " alt="" coords="121,79,251,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="142,30,170,65,166,68,138,33"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="168,107,107,146,104,142,166,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="167,153,213,178"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="189,105,191,137,186,137,184,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="237,153,290,178"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="201,103,241,140,237,144,197,107"/>
+</map>

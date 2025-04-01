@@ -1,0 +1,5 @@
+<map id="Gameplay" name="Gameplay">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,226,253,1111"/>
+<area shape="rect" id="Node000002" href="$class_scene.html" title=" " alt="" coords="23,5,235,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,193,132,226,127,226,127,193"/>
+</map>

@@ -111,11 +111,33 @@ $(function(){initNavTree('class_application.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>main application that handles the game loop  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_application_8hpp_source.html">Application.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Application:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_application__coll__graph.png" border="0" usemap="#a_application_coll__map" alt="Collaboration graph"/></div>
+<map name="a_application_coll__map" id="a_application_coll__map">
+<area shape="rect" title="main application that handles the game loop" alt="" coords="100,1160,262,1363"/>
+<area shape="rect" title=" " alt="" coords="90,907,190,973"/>
+<area shape="poly" title=" " alt="" coords="146,973,168,1143,163,1144,141,974"/>
+<area shape="rect" href="class_game_state.html" title=" " alt="" coords="213,783,413,1097"/>
+<area shape="poly" title=" " alt="" coords="251,1098,232,1145,227,1143,246,1096"/>
+<area shape="rect" href="class_asset_manager.html" title="centraly manage all assest and themes" alt="" coords="87,285,301,720"/>
+<area shape="poly" title=" " alt="" coords="244,720,255,759,257,766,252,768,250,760,239,721"/>
+<area shape="rect" title=" " alt="" coords="5,5,42,72"/>
+<area shape="poly" title=" " alt="" coords="26,71,31,158,39,209,52,260,82,329,77,331,47,262,34,211,26,158,21,72"/>
+<area shape="rect" title=" " alt="" coords="66,5,120,72"/>
+<area shape="poly" title=" " alt="" coords="92,71,88,157,90,209,97,260,99,268,93,269,92,261,85,209,83,157,87,71"/>
+<area shape="rect" title=" " alt="" coords="213,5,378,72"/>
+<area shape="poly" title=" " alt="" coords="296,72,286,158,269,261,267,269,262,268,264,260,281,157,290,71"/>
+<area shape="rect" title=" " alt="" coords="485,5,536,72"/>
+<area shape="poly" title=" " alt="" coords="519,71,524,114,522,166,510,218,498,242,482,263,462,277,443,283,404,281,362,276,340,279,317,287,315,282,339,273,362,271,404,276,442,278,460,272,478,259,494,239,505,216,517,165,518,114,514,72"/>
+<area shape="rect" title=" " alt="" coords="325,469,458,536"/>
+<area shape="poly" title=" " alt="" coords="389,536,347,767,342,766,383,535"/>
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -132,20 +154,27 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a560aab587a90a1501eeee97160b09c3d" id="r_a560aab587a90a1501eeee97160b09c3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a560aab587a90a1501eeee97160b09c3d">handleEvents</a> ()</td></tr>
+<tr class="memdesc:a560aab587a90a1501eeee97160b09c3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">handle user input and other events  <br /></td></tr>
 <tr class="separator:a560aab587a90a1501eeee97160b09c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1493bab632d6909708b0dc214f464de" id="r_aa1493bab632d6909708b0dc214f464de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa1493bab632d6909708b0dc214f464de">update</a> (sf::Time dt)</td></tr>
+<tr class="memdesc:aa1493bab632d6909708b0dc214f464de"><td class="mdescLeft">&#160;</td><td class="mdescRight">update state of the game  <br /></td></tr>
 <tr class="separator:aa1493bab632d6909708b0dc214f464de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9ac99d97ee1cc814298a2f2388bde835" id="r_a9ac99d97ee1cc814298a2f2388bde835"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ac99d97ee1cc814298a2f2388bde835">render</a> ()</td></tr>
+<tr class="memdesc:a9ac99d97ee1cc814298a2f2388bde835"><td class="mdescLeft">&#160;</td><td class="mdescRight">render according to game state  <br /></td></tr>
 <tr class="separator:a9ac99d97ee1cc814298a2f2388bde835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a79a916095e251219238f598a6029f4b2" id="r_a79a916095e251219238f598a6029f4b2"><td class="memItemLeft" align="right" valign="top">sf::RenderWindow&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79a916095e251219238f598a6029f4b2">window</a></td></tr>
+<tr class="memdesc:a79a916095e251219238f598a6029f4b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">where the application is rendered to  <br /></td></tr>
 <tr class="separator:a79a916095e251219238f598a6029f4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a546975a915b8374da2d41325152555b1" id="r_a546975a915b8374da2d41325152555b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_state.html">GameState</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a546975a915b8374da2d41325152555b1">gameState</a></td></tr>
+<tr class="memdesc:a546975a915b8374da2d41325152555b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">holds all data regarding game state including the current scene  <br /></td></tr>
 <tr class="separator:a546975a915b8374da2d41325152555b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>main application that handles the game loop </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa8cc05ce6b6092be5ecdfdae44e05f8" name="afa8cc05ce6b6092be5ecdfdae44e05f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afa8cc05ce6b6092be5ecdfdae44e05f8">&#9670;&#160;</a></span>Application() <span class="overload">[1/2]</span></h2>
 
@@ -221,6 +250,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>handle user input and other events </p>
+
 </div>
 </div>
 <a id="a9ac99d97ee1cc814298a2f2388bde835" name="a9ac99d97ee1cc814298a2f2388bde835"></a>
@@ -245,6 +276,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>render according to game state </p>
 
 </div>
 </div>
@@ -288,6 +321,14 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>update state of the game </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>time difference from last frame to this from </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -311,6 +352,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>holds all data regarding game state including the current scene </p>
+
 </div>
 </div>
 <a id="a79a916095e251219238f598a6029f4b2" name="a79a916095e251219238f598a6029f4b2"></a>
@@ -332,6 +375,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>where the application is rendered to </p>
 
 </div>
 </div>

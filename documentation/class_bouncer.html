@@ -112,11 +112,27 @@ $(function(){initNavTree('class_bouncer.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>"player" object aka. "Bouncer" with all releveant data  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_bouncer_8hpp_source.html">Bouncer.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Bouncer:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_bouncer__coll__graph.png" border="0" usemap="#a_bouncer_coll__map" alt="Collaboration graph"/></div>
+<map name="a_bouncer_coll__map" id="a_bouncer_coll__map">
+<area shape="rect" title="&quot;player&quot; object aka. &quot;Bouncer&quot; with all releveant data" alt="" coords="374,165,605,469"/>
+<area shape="rect" title=" " alt="" coords="5,5,102,72"/>
+<area shape="poly" title=" " alt="" coords="60,71,70,106,89,139,117,166,148,191,217,232,289,263,359,285,357,290,287,268,215,237,145,195,114,170,85,142,65,108,55,72"/>
+<area shape="rect" title=" " alt="" coords="190,5,323,72"/>
+<area shape="poly" title=" " alt="" coords="262,71,269,105,284,139,320,186,363,227,359,231,316,190,279,142,264,107,256,72"/>
+<area shape="rect" title=" " alt="" coords="467,5,512,72"/>
+<area shape="poly" title=" " alt="" coords="492,71,492,148,487,148,487,71"/>
+<area shape="rect" title=" " alt="" coords="553,5,613,72"/>
+<area shape="poly" title=" " alt="" coords="577,72,556,141,554,149,549,148,551,140,572,71"/>
+<area shape="rect" title=" " alt="" coords="649,5,685,72"/>
+<area shape="poly" title=" " alt="" coords="659,72,646,106,628,142,617,161,612,158,623,139,641,104,654,70"/>
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -126,21 +142,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa4b29686481542e0c16b8bb97339cdba" id="r_aa4b29686481542e0c16b8bb97339cdba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4b29686481542e0c16b8bb97339cdba">render</a> (sf::RenderWindow &amp;window)</td></tr>
 <tr class="separator:aa4b29686481542e0c16b8bb97339cdba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b51c1afbd4a859cbd1c2a7cac04b4b7" id="r_a6b51c1afbd4a859cbd1c2a7cac04b4b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6b51c1afbd4a859cbd1c2a7cac04b4b7">update</a> (sf::Time dt)</td></tr>
+<tr class="memdesc:a6b51c1afbd4a859cbd1c2a7cac04b4b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">update data of bouncer  <br /></td></tr>
 <tr class="separator:a6b51c1afbd4a859cbd1c2a7cac04b4b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa4e4fe9e46846e9d1861987945a63900" id="r_aa4e4fe9e46846e9d1861987945a63900"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4e4fe9e46846e9d1861987945a63900">updateAccordingToIntersection</a> (sf::FloatRect intersection, sf::Time dt)</td></tr>
+<tr class="memdesc:aa4e4fe9e46846e9d1861987945a63900"><td class="mdescLeft">&#160;</td><td class="mdescRight">if an intersection with a platform is present this overwrites the state so that the ball bounces  <br /></td></tr>
 <tr class="separator:aa4e4fe9e46846e9d1861987945a63900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a571ec1983442004e76b91da1f0607f30" id="r_a571ec1983442004e76b91da1f0607f30"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a571ec1983442004e76b91da1f0607f30">getGlobalBounds</a> ()</td></tr>
+<tr class="memdesc:a571ec1983442004e76b91da1f0607f30"><td class="mdescLeft">&#160;</td><td class="mdescRight">bounds object with position and size  <br /></td></tr>
 <tr class="separator:a571ec1983442004e76b91da1f0607f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a052b1b3dd35476bd330dd8f4384cd6" id="r_a0a052b1b3dd35476bd330dd8f4384cd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a052b1b3dd35476bd330dd8f4384cd6">addExtraAcceleration</a> ()</td></tr>
+<tr class="memdesc:a0a052b1b3dd35476bd330dd8f4384cd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">add downward acceleration  <br /></td></tr>
 <tr class="separator:a0a052b1b3dd35476bd330dd8f4384cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a3a234a47213866472e9bb5800847210e" id="r_a3a234a47213866472e9bb5800847210e"><td class="memItemLeft" align="right" valign="top">static const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3a234a47213866472e9bb5800847210e">BOUNCER_HORIZONTAL_POSITION</a> = 400</td></tr>
+<tr class="memdesc:a3a234a47213866472e9bb5800847210e"><td class="mdescLeft">&#160;</td><td class="mdescRight">fix horizontal position of bouncer  <br /></td></tr>
 <tr class="separator:a3a234a47213866472e9bb5800847210e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cc54b645e6ddab787ff6c6ba293a495" id="r_a5cc54b645e6ddab787ff6c6ba293a495"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cc54b645e6ddab787ff6c6ba293a495">DOWNWARD_ACCELERATION</a> = 30.0f</td></tr>
+<tr class="memdesc:a5cc54b645e6ddab787ff6c6ba293a495"><td class="mdescLeft">&#160;</td><td class="mdescRight">default downward acceleration e.g. "gravity"  <br /></td></tr>
 <tr class="separator:a5cc54b645e6ddab787ff6c6ba293a495"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af0ba7805dc6c88b72288e790785d686b" id="r_af0ba7805dc6c88b72288e790785d686b"><td class="memItemLeft" align="right" valign="top">static constexpr float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af0ba7805dc6c88b72288e790785d686b">BOUNCE_FRICTION_SPEED_REDUCTION_FACTOR</a> = 0.1f</td></tr>
+<tr class="memdesc:af0ba7805dc6c88b72288e790785d686b"><td class="mdescLeft">&#160;</td><td class="mdescRight">factor by which speed is reduced on every bounce  <br /></td></tr>
 <tr class="separator:af0ba7805dc6c88b72288e790785d686b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
@@ -167,7 +190,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a7894d4483eb97a3747242fd8114ecd4e" id="r_a7894d4483eb97a3747242fd8114ecd4e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7894d4483eb97a3747242fd8114ecd4e">extraacceleration</a></td></tr>
 <tr class="separator:a7894d4483eb97a3747242fd8114ecd4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>"player" object aka. "Bouncer" with all releveant data </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4bf55351f83fc53cebd29ad8212ece6b" name="a4bf55351f83fc53cebd29ad8212ece6b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4bf55351f83fc53cebd29ad8212ece6b">&#9670;&#160;</a></span>Bouncer()</h2>
 
@@ -201,6 +226,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>add downward acceleration </p>
+
 </div>
 </div>
 <a id="a571ec1983442004e76b91da1f0607f30" name="a571ec1983442004e76b91da1f0607f30"></a>
@@ -218,6 +245,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>bounds object with position and size </p>
+<dl class="section return"><dt>Returns</dt><dd>bounds object with position and size </dd></dl>
+
 </div>
 </div>
 <a id="aa4b29686481542e0c16b8bb97339cdba" name="aa4b29686481542e0c16b8bb97339cdba"></a>
@@ -234,6 +264,12 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>where the bouncer should be renderd </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -251,6 +287,14 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>update data of bouncer </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>time difference from last frame to this from dt </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -297,6 +341,15 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>if an intersection with a platform is present this overwrites the state so that the ball bounces </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">intersection</td><td>with a platform </td></tr>
+    <tr><td class="paramname">dt</td><td>time difference from last frame to this from dt </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -415,6 +468,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>factor by which speed is reduced on every bounce </p>
+
 </div>
 </div>
 <a id="a3a234a47213866472e9bb5800847210e" name="a3a234a47213866472e9bb5800847210e"></a>
@@ -437,6 +492,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>fix horizontal position of bouncer </p>
+
 </div>
 </div>
 <a id="a5cc54b645e6ddab787ff6c6ba293a495" name="a5cc54b645e6ddab787ff6c6ba293a495"></a>
@@ -458,6 +515,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>default downward acceleration e.g. "gravity" </p>
 
 </div>
 </div>

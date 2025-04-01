@@ -1,0 +1,19 @@
+<map id="Platform" name="Platform">
+<area shape="rect" id="Node000001" title=" " alt="" coords="50,798,253,1238"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,469,42,536"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="29,535,40,642,51,708,65,774,67,782,62,783,60,775,46,709,35,643,23,536"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="71,469,96,536"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="88,535,96,641,110,774,111,782,106,782,105,775,91,642,83,536"/>
+<area shape="rect" id="Node000004" href="$class_asset_manager.html" title="centraly manage all assest and themes" alt="" coords="121,285,335,720"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,720,189,782,184,781,193,720"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="39,5,75,72"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="57,71,56,111,59,159,68,211,85,259,96,271,110,283,113,287,108,290,106,286,93,275,81,262,63,212,54,160,51,111,52,71"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="100,5,153,72"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="125,71,121,157,123,209,130,260,132,268,127,269,125,261,118,209,116,157,120,71"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="246,5,412,72"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="329,72,320,158,302,261,301,269,295,268,297,260,314,157,324,71"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="518,5,569,72"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="553,71,557,114,556,166,543,218,531,242,515,263,496,277,476,283,437,281,396,276,374,279,350,287,348,282,373,273,396,271,438,276,476,278,493,272,511,259,527,239,538,216,550,165,552,114,547,72"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="359,469,403,536"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="383,536,374,621,364,672,349,721,311,801,265,876,261,873,306,798,344,719,359,670,369,620,377,535"/>
+</map>

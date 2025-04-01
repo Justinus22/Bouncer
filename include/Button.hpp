@@ -8,6 +8,8 @@ class Button
 {
 public:
     Button(AssetManager &assetManager, const sf::Vector2f &position, const sf::Vector2f &size, const std::string &text);
+    /// @brief
+    /// @param window
     void draw(sf::RenderWindow &window);
     bool isClicked(const sf::Vector2f &mousePos) const;
 

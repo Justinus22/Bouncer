@@ -1,0 +1,15 @@
+<map id="GameOver" name="GameOver">
+<area shape="rect" id="Node000001" title=" " alt="" coords="374,410,584,698"/>
+<area shape="rect" id="Node000002" href="$class_scene.html" title=" " alt="" coords="5,154,217,327"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="199,336,249,384,312,435,376,481,373,486,309,439,246,388,195,340"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="391,5,426,72"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="392,49,365,61,334,80,304,105,281,136,258,192,252,239,260,288,281,346,297,378,317,408,364,461,360,465,312,411,292,380,276,348,255,289,246,239,253,190,276,133,300,101,331,75,363,56,390,44"/>
+<area shape="rect" id="Node000005" href="$class_button.html" title=" " alt="" coords="383,135,575,347"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="422,71,439,118,434,120,417,72"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="525,5,570,72"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="567,71,580,101,590,134,603,205,609,262,603,319,582,387,578,395,574,393,577,385,598,317,603,262,598,206,585,135,575,103,562,73"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="539,72,523,120,518,118,534,71"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="482,347,482,393,477,393,477,347"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="784,208,831,274"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="802,275,788,312,767,348,730,390,688,427,600,490,597,485,684,423,726,386,763,345,784,309,797,273"/>
+</map>
