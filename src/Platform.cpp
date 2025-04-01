@@ -25,10 +25,18 @@ void Platform::setSprite(sf::Sprite sprite)
     this->sprite = sprite;
 }
 
-bool Platform::removeHealth()
+void Platform::removeHealth()
 {
     lifes--;
-    this->sprite = generateNewSpriteFromPlatformData(this->sprite.getPosition(), this->lifes, this->size);
+
+    if (lifes <= 1)
+    {
+        this->sprite = generateNewSpriteFromPlatformData(this->sprite.getPosition(), this->lifes, this->size);
+    }
+}
+
+bool Platform::hasHealthLeft()
+{
     return lifes > 0;
 }
 
@@ -46,6 +54,16 @@ void Platform::setSize(Platform::Size size)
 {
     this->size = size;
     this->sprite = generateNewSpriteFromPlatformData(this->sprite.getPosition(), this->lifes, this->size);
+}
+
+bool Platform::operator==(const Platform &otherPlatform) const
+{
+    return sprite.getPosition().x == otherPlatform.sprite.getPosition().x;
+}
+
+bool Platform::operator!=(const Platform &otherPlatform) const
+{
+    return !operator==(otherPlatform);
 }
 
 sf::Sprite Platform::generateNewSpriteFromPlatformData(sf::Vector2f pos, int lifes, Size size)

@@ -37,11 +37,15 @@ void Gameplay::update(sf::Time dt)
     }
 
     bouncer.update(dt);
-    if (std::optional<std::tuple<sf::FloatRect, Platform>> intersectionData = this->getBouncerIntersectionWithPlatformBelow())
+    if (std::optional<std::tuple<sf::FloatRect, Platform *>> intersectionData = this->getBouncerIntersectionWithPlatformBelow())
     {
         bouncer.updateAccordingToIntersection(std::get<sf::FloatRect>(*intersectionData), dt);
-        Platform intersectedPlatform = std::get<Platform>(*intersectionData);
-        intersectedPlatform.removeHealth();
+        Platform *intersectedPlatform = std::get<Platform *>(*intersectionData);
+        intersectedPlatform->removeHealth();
+        if (!intersectedPlatform->hasHealthLeft())
+        {
+            platforms.remove(*intersectedPlatform);
+        }
         this->increaseScore();
     }
 
@@ -188,19 +192,14 @@ void Gameplay::moveSceneToRight(sf::Time dt)
     }
 }
 
-std::optional<std::tuple<sf::FloatRect, Platform>> Gameplay::getBouncerIntersectionWithPlatformBelow()
+std::optional<std::tuple<sf::FloatRect, Platform *>> Gameplay::getBouncerIntersectionWithPlatformBelow()
 {
-    auto platformIterator = platforms.begin();
+    std::list<Platform>::iterator platformIterator = platforms.begin();
     while (platformIterator != platforms.end())
     {
         if (platformIterator->getSprite().getGlobalBounds().findIntersection(bouncer.getGlobalBounds()))
         {
-            if (!platformIterator->removeHealth())
-            {
-                platformIterator = platforms.erase(platformIterator);
-            }
-
-            return std::tuple(bouncer.getGlobalBounds(), *platformIterator);
+            return std::tuple(bouncer.getGlobalBounds(), &(*platformIterator)); // derefencing and referencing as trick to pointer from iterator
         }
         platformIterator++;
     }

@@ -7,7 +7,14 @@ Bouncer::Bouncer(AssetManager &assetManager) : ballSprite(assetManager.getBallTe
 {
     position = sf::Vector2f({BOUNCER_HORIZONTAL_POSITION, 200});
     speed = 0;
-    acceleration = 0;
+    acceleration = DOWNWARD_ACCELERATION;
+    extraacceleration = 0;
+
+    sf::Vector2f sizeBall = ballSprite.getGlobalBounds().size;
+    ballSprite.setPosition({position.x - sizeBall.x / 2, position.y});
+
+    sf::Vector2f sizeFace = faceSprite.getGlobalBounds().size;
+    faceSprite.setPosition({position.x - sizeFace.x / 2, position.y + sizeBall.y / 2 - sizeFace.y / 2});
 }
 
 void Bouncer::render(sf::RenderWindow &window)
@@ -16,7 +23,6 @@ void Bouncer::render(sf::RenderWindow &window)
     // position sprites such that position is at the bottom center of the texture (-> contact point to platforms)
     sf::Vector2f sizeBall = ballSprite.getGlobalBounds().size;
     ballSprite.setPosition({position.x - sizeBall.x / 2, position.y});
-    ballSprite.setScale({1, 1});
 
     sf::Vector2f sizeFace = faceSprite.getGlobalBounds().size;
     faceSprite.setPosition({position.x - sizeFace.x / 2, position.y + sizeBall.y / 2 - sizeFace.y / 2});

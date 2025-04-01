@@ -44,7 +44,7 @@ private:
     void moveSceneToRight(sf::Time dt);
     /// @brief calculates where the ball needs to bounce or not and removes lifes from platforms
     /// @return wether there is an intersection with platform beaneth the bouncer
-    std::optional<std::tuple<sf::FloatRect, Platform>> getBouncerIntersectionWithPlatformBelow();
+    std::optional<std::tuple<sf::FloatRect, Platform *>> getBouncerIntersectionWithPlatformBelow();
     void increaseScore();
 
     AssetManager &assetManager;

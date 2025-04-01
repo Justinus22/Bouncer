@@ -12,8 +12,8 @@ public:
     sf::Sprite &getSprite();
     void setSprite(sf::Sprite sprite);
     /// @brief removes one life from the platform and updates texture if neccesarray
-    /// @return true, when the platform still has life left, else false
-    bool removeHealth();
+    void removeHealth();
+    bool hasHealthLeft();
     void render(sf::RenderWindow &window);
 
     enum class Size
@@ -26,6 +26,9 @@ public:
     Size size;
 
     const static int MAX_LIFE = 5;
+
+    bool operator==(const Platform &otherPlatform) const;
+    bool operator!=(const Platform &otherPlatform) const;
 
 private:
     /// @brief gernerate a new sprite because i cant change the texture of a sprite without render bugs, idk why
