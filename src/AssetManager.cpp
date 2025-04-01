@@ -3,11 +3,17 @@
 
 AssetManager::AssetManager()
 {
+    currentTheme = AssetManager::Theme::FOREST;
+    this->loadTextures();
+}
+
+void AssetManager::loadTextures()
+{
     if (!font.openFromFile("assets/fonts/arial.ttf"))
     {
         std::cout << "Error loading font." << std::endl;
     }
-    if (!backgroundTexture.loadFromFile("assets/textures/backgrounds/backgroundColorForest.png"))
+    if (!backgroundTexture.loadFromFile(this->THEME_TO_BACKGROUND_PATH_MAP.at(currentTheme)))
     {
         std::cout << "Error loading background texture." << std::endl;
     }
@@ -48,6 +54,16 @@ AssetManager::AssetManager()
         std::cout << "Error loading face texture;" << std::endl;
     }
 }
+void AssetManager::randomlyUpdateTheme()
+{
+    currentTheme = AssetManager::Theme(rand() % 4);
+}
+const std::map<AssetManager::Theme, std::string> AssetManager::THEME_TO_BACKGROUND_PATH_MAP = {
+    {AssetManager::Theme::FOREST, "assets/textures/backgrounds/backgroundColorForest.png"},
+    {AssetManager::Theme::GRASS, "assets/textures/backgrounds/backgroundColorGrass.png"},
+    {AssetManager::Theme::FALL, "assets/textures/backgrounds/backgroundColorFall.png"},
+    {AssetManager::Theme::DESERT, "assets/textures/backgrounds/backgroundColorDesert.png"},
+};
 
 sf::Font &AssetManager::getFont()
 {

@@ -8,7 +8,7 @@
 class GameOver : public Scene
 {
 public:
-    GameOver(AssetManager &assetManager, int score);
+    GameOver(AssetManager &assetManager, int score, float backgroundSplitXPosition);
     void update(sf::Time dt) override;
     void handleEvents(sf::RenderWindow &window) override;
     void render(sf::RenderWindow &window) override;
@@ -23,7 +23,8 @@ public:
 private:
     sf::Text gameOverText;
     sf::Text scoreText;
-    sf::Sprite backgroundSprite;
+    sf::Sprite backgroundSpriteLeft;
+    sf::Sprite backgroundSpriteRight;
 
     Button continueButton;
 

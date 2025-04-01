@@ -99,6 +99,15 @@ int Gameplay::getScore()
     return this->score;
 }
 
+float Gameplay::getBackgroundSplitXPosition()
+{
+    if (backgroundSprites.size() == 0)
+    {
+        return 0.0f;
+    }
+    return backgroundSprites.front().getGlobalBounds().position.x + backgroundSprites.front().getGlobalBounds().size.x;
+}
+
 void Gameplay::removeUnseenSprites()
 {
     removeUnseenBackground();

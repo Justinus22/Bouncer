@@ -30,7 +30,7 @@ void GameState::update(sf::Time dt)
         {
             if (gameplay->isGameover())
             {
-                setScene(std::make_shared<GameOver>(assetManager, gameplay->getScore()));
+                setScene(std::make_shared<GameOver>(assetManager, gameplay->getScore(), gameplay->getBackgroundSplitXPosition()));
             }
         }
     }
@@ -70,6 +70,8 @@ void GameState::handleGameOverAction(GameOver::Action action)
     {
     case GameOver::Action::Continue:
         setScene(std::make_shared<MainMenu>(assetManager));
+        assetManager.randomlyUpdateTheme();
+        assetManager.loadTextures();
         break;
     default:
         break;

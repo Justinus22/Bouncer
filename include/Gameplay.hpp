@@ -29,6 +29,7 @@ public:
 
     bool isGameover();
     int getScore();
+    float getBackgroundSplitXPosition();
 
     std::queue<Action> &getGameActionQueue();
 
