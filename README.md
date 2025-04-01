@@ -1,3 +1,6 @@
+
+ **Instead of only reading this file, open the documentation in the documentation folder (./documentation/index.html) to read the doxygen documentation with auto-generated UML-diagrams.**
+
 # BOUNCER
 
 Bounce as many times as you can! But... don't fall down.
