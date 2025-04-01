@@ -8,6 +8,7 @@ GameOver::GameOver(AssetManager &assetManager, int score, float backgroundSplitX
                                                                                             gameOverText(assetManager.getFont(), "Game Over!"),
                                                                                             scoreText(assetManager.getFont(), "Score: " + std::to_string(score))
 {
+    // set background sprites position in such a way that they are displayed like in the last from of the gameplay scene
     backgroundSpriteLeft.setPosition({backgroundSplitXPosition - backgroundSpriteLeft.getTexture().getSize().x, 0});
     backgroundSpriteRight.setPosition({backgroundSplitXPosition, 0});
 

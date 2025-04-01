@@ -9,6 +9,7 @@ Button::Button(AssetManager &assetManager, const sf::Vector2f &position, const s
       text(assetManager.getFont(), textString, 24)
 {
 
+    // scale and position according to position and size input
     sf::Vector2f factors({size.x / assetManager.getButtonTexture().getSize().x, size.y / assetManager.getButtonTexture().getSize().y});
     sprite.setScale(factors);
     sf::Vector2f spritePos({position.x - size.x / 2, position.y - size.y / 2});

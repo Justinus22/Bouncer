@@ -17,7 +17,6 @@ class Gameplay : public Scene
 {
 public:
     Gameplay(AssetManager &assetManager);
-    ~Gameplay();
     void update(sf::Time dt) override;
     void render(sf::RenderWindow &window) override;
     void handleEvents(sf::RenderWindow &window) override;
@@ -35,6 +34,7 @@ public:
     std::queue<Action> &getGameActionQueue();
 
 private:
+    /// @brief delete all sprites that are never to be seen again
     void removeUnseenSprites();
     void removeUnseenPlatforms();
     void removeUnseenBackground();

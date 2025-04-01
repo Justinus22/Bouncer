@@ -9,6 +9,10 @@
 class GameOver : public Scene
 {
 public:
+    /// @brief consturct the gameover scene
+    /// @param assetManager that holds assets for this scene
+    /// @param score that was reached in the prev game
+    /// @param backgroundSplitXPosition positioning of background in the last frame of gameplay scene -> x pos of split between 2 backgrounds
     GameOver(AssetManager &assetManager, int score, float backgroundSplitXPosition);
     void update(sf::Time dt) override;
     void handleEvents(sf::RenderWindow &window) override;

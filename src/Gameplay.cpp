@@ -22,14 +22,11 @@ Gameplay::Gameplay(AssetManager &assetManager) : assetManager(assetManager), sco
     scoreText.setString(std::to_string(score));
 }
 
-Gameplay::~Gameplay()
-{
-}
-
 void Gameplay::update(sf::Time dt)
 {
 
     this->updateStateByActionsQueue(dt);
+
     if (platformGenerator.shouldGenerateNextPlatform(platforms))
     {
         platformGenerator.generateNextPlatform(assetManager, platforms);
@@ -37,6 +34,8 @@ void Gameplay::update(sf::Time dt)
     }
 
     bouncer.update(dt);
+
+    // if there is an intersection let the bouncer bounce, remove health from bounced platform and increase the scrore
     if (std::optional<std::tuple<sf::FloatRect, Platform *>> intersectionData = this->getBouncerIntersectionWithPlatformBelow())
     {
         bouncer.updateAccordingToIntersection(std::get<sf::FloatRect>(*intersectionData), dt);
@@ -49,6 +48,7 @@ void Gameplay::update(sf::Time dt)
         this->increaseScore();
     }
 
+    // if the bouncer fell of the screen -> gameover
     if (bouncer.getGlobalBounds().position.y + bouncer.getGlobalBounds().size.y > constants::WINDOW_HEIGHT)
     {
         this->gameover = true;
@@ -153,7 +153,7 @@ void Gameplay::removeUnseenBackground()
 void Gameplay::addNewBackgroundIfNeeded()
 {
     const float backPosX = backgroundSprites.back().getGlobalBounds().position.x + backgroundSprites.back().getGlobalBounds().size.x;
-    if (backPosX < 1200)
+    if (backPosX < constants::WINDOW_WIDTH)
     {
         backgroundSprites.push_back(sf::Sprite(assetManager.getBackgroundTexture()));
         backgroundSprites.back().setPosition({backPosX, 0});

@@ -37,6 +37,7 @@ void Bouncer::update(sf::Time dt)
     updateSpeed();
     updatePosition(dt);
 
+    // reset the extraacceleration
     extraacceleration = 0;
 }
 
