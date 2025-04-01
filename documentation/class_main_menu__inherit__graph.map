@@ -1,5 +1,5 @@
 <map id="MainMenu" name="MainMenu">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,226,223,732"/>
-<area shape="rect" id="Node000002" href="$class_scene.html" title=" " alt="" coords="8,5,220,178"/>
+<area shape="rect" id="Node000001" title="main menu scene where you can start the game or exit it" alt="" coords="5,226,223,732"/>
+<area shape="rect" id="Node000002" href="$class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="8,5,220,178"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,193,117,226,112,226,112,193"/>
 </map>

@@ -111,14 +111,17 @@ $(function(){initNavTree('class_game_over.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>gameover scene displaying score  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_game_over_8hpp_source.html">GameOver.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for GameOver:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_over__inherit__graph.png" border="0" usemap="#a_game_over_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_game_over_inherit__map" id="a_game_over_inherit__map">
-<area shape="rect" title=" " alt="" coords="6,226,216,630"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="5,5,217,178"/>
+<area shape="rect" title="gameover scene displaying score" alt="" coords="6,226,216,630"/>
+<area shape="rect" href="class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="5,5,217,178"/>
 <area shape="poly" title=" " alt="" coords="114,193,114,226,109,226,109,193"/>
 </map>
 </div>
@@ -127,12 +130,12 @@ Collaboration diagram for GameOver:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_over__coll__graph.png" border="0" usemap="#a_game_over_coll__map" alt="Collaboration graph"/></div>
 <map name="a_game_over_coll__map" id="a_game_over_coll__map">
-<area shape="rect" title=" " alt="" coords="374,410,584,698"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="5,154,217,327"/>
+<area shape="rect" title="gameover scene displaying score" alt="" coords="374,410,584,698"/>
+<area shape="rect" href="class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="5,154,217,327"/>
 <area shape="poly" title=" " alt="" coords="199,336,249,384,312,435,376,481,373,486,309,439,246,388,195,340"/>
 <area shape="rect" title=" " alt="" coords="391,5,426,72"/>
 <area shape="poly" title=" " alt="" coords="392,49,365,61,334,80,304,105,281,136,258,192,252,239,260,288,281,346,297,378,317,408,364,461,360,465,312,411,292,380,276,348,255,289,246,239,253,190,276,133,300,101,331,75,363,56,390,44"/>
-<area shape="rect" href="class_button.html" title=" " alt="" coords="383,135,575,347"/>
+<area shape="rect" href="class_button.html" title="basic button template" alt="" coords="383,135,575,347"/>
 <area shape="poly" title=" " alt="" coords="422,71,439,118,434,120,417,72"/>
 <area shape="rect" title=" " alt="" coords="525,5,570,72"/>
 <area shape="poly" title=" " alt="" coords="567,71,580,101,590,134,603,205,609,262,603,319,582,387,578,395,574,393,577,385,598,317,603,262,598,206,585,135,575,103,562,73"/>
@@ -165,8 +168,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a02c43ec5037e58090e9a142d90de3c13" id="r_a02c43ec5037e58090e9a142d90de3c13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02c43ec5037e58090e9a142d90de3c13">setAction</a> (<a class="el" href="#a8083b23a9d70ab5a08dc425c43860830">Action</a> newAction)</td></tr>
 <tr class="separator:a02c43ec5037e58090e9a142d90de3c13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_scene"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_scene')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_scene.html">Scene</a></td></tr>
-<tr class="memitem:af6e09d91ebd10ae9cc7c12c39d06386c inherit pub_methods_class_scene" id="r_af6e09d91ebd10ae9cc7c12c39d06386c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#af6e09d91ebd10ae9cc7c12c39d06386c">~Scene</a> ()=default</td></tr>
-<tr class="separator:af6e09d91ebd10ae9cc7c12c39d06386c inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe37a76bc29346ed2c17400b818ba38 inherit pub_methods_class_scene" id="r_aafe37a76bc29346ed2c17400b818ba38"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aafe37a76bc29346ed2c17400b818ba38">~Scene</a> ()=0</td></tr>
+<tr class="separator:aafe37a76bc29346ed2c17400b818ba38 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -183,7 +186,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:ac6e2849dd07514d4c2ece67fce768af8" id="r_ac6e2849dd07514d4c2ece67fce768af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a8083b23a9d70ab5a08dc425c43860830">Action</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6e2849dd07514d4c2ece67fce768af8">action</a></td></tr>
 <tr class="separator:ac6e2849dd07514d4c2ece67fce768af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>gameover scene displaying score </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a8083b23a9d70ab5a08dc425c43860830" name="a8083b23a9d70ab5a08dc425c43860830"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8083b23a9d70ab5a08dc425c43860830">&#9670;&#160;</a></span>Action</h2>
 

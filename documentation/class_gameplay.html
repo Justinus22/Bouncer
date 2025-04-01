@@ -112,14 +112,17 @@ $(function(){initNavTree('class_gameplay.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>gameplay scene itself with a bouncer and backgrounds  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_gameplay_8hpp_source.html">Gameplay.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Gameplay:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_gameplay__inherit__graph.png" border="0" usemap="#a_gameplay_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_gameplay_inherit__map" id="a_gameplay_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,226,253,1111"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="23,5,235,178"/>
+<area shape="rect" title="gameplay scene itself with a bouncer and backgrounds" alt="" coords="5,226,253,1111"/>
+<area shape="rect" href="class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="23,5,235,178"/>
 <area shape="poly" title=" " alt="" coords="132,193,132,226,127,226,127,193"/>
 </map>
 </div>
@@ -128,8 +131,8 @@ Collaboration diagram for Gameplay:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_gameplay__coll__graph.png" border="0" usemap="#a_gameplay_coll__map" alt="Collaboration graph"/></div>
 <map name="a_gameplay_coll__map" id="a_gameplay_coll__map">
-<area shape="rect" title=" " alt="" coords="869,783,1117,1355"/>
-<area shape="rect" href="class_scene.html" title=" " alt="" coords="5,416,217,589"/>
+<area shape="rect" title="gameplay scene itself with a bouncer and backgrounds" alt="" coords="869,783,1117,1355"/>
+<area shape="rect" href="class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="5,416,217,589"/>
 <area shape="poly" title=" " alt="" coords="147,601,166,642,189,683,217,723,249,757,321,815,400,866,482,909,567,947,650,978,730,1004,869,1041,868,1046,729,1010,648,983,565,952,480,914,397,870,318,819,246,761,213,726,185,686,161,644,143,603"/>
 <area shape="rect" href="class_asset_manager.html" title="centraly manage all assest and themes" alt="" coords="384,285,598,720"/>
 <area shape="poly" title=" " alt="" coords="575,719,601,758,658,824,723,884,791,937,856,983,853,988,788,942,720,888,654,827,597,761,570,722"/>
@@ -148,7 +151,7 @@ Collaboration diagram for Gameplay:</div>
 <area shape="poly" title=" " alt="" coords="820,536,813,636,816,698,826,759,842,809,864,859,859,861,837,811,821,760,811,698,808,636,815,535"/>
 <area shape="rect" title=" " alt="" coords="923,5,958,72"/>
 <area shape="poly" title=" " alt="" coords="926,72,918,96,909,148,909,189,913,285,908,407,903,503,903,598,913,720,919,766,914,767,907,721,897,598,898,503,903,407,907,285,903,189,904,148,913,95,921,71"/>
-<area shape="rect" href="class_platform_generator.html" title=" " alt="" coords="1097,394,1317,611"/>
+<area shape="rect" href="class_platform_generator.html" title="for generating new platforms, holds all data needed for that" alt="" coords="1097,394,1317,611"/>
 <area shape="poly" title=" " alt="" coords="932,72,922,114,916,164,922,215,930,238,944,259,958,271,973,277,1006,275,1041,270,1060,273,1079,282,1104,302,1125,326,1160,377,1156,380,1121,329,1100,306,1077,287,1058,278,1041,275,1006,280,972,282,956,276,940,262,926,240,917,216,911,164,916,113,927,71"/>
 <area shape="rect" href="class_bouncer.html" title="&quot;player&quot; object aka. &quot;Bouncer&quot; with all releveant data" alt="" coords="1341,350,1572,654"/>
 <area shape="poly" title=" " alt="" coords="959,38,992,41,1034,49,1078,66,1098,78,1116,94,1131,115,1137,137,1136,180,1136,221,1143,240,1158,259,1179,272,1199,278,1219,277,1240,273,1284,267,1307,271,1331,282,1360,306,1385,335,1381,338,1357,310,1329,287,1306,276,1284,273,1241,279,1220,282,1199,283,1177,277,1155,263,1138,243,1131,222,1131,180,1132,138,1126,118,1112,97,1095,83,1076,71,1033,54,991,46,958,43"/>
@@ -201,8 +204,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af2bf477b5b550d9c5b2dfacbc694ff8b" id="r_af2bf477b5b550d9c5b2dfacbc694ff8b"><td class="memItemLeft" align="right" valign="top">std::queue&lt; <a class="el" href="#a7572f4138c1126c93f4c4478ae371c3e">Action</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af2bf477b5b550d9c5b2dfacbc694ff8b">getGameActionQueue</a> ()</td></tr>
 <tr class="separator:af2bf477b5b550d9c5b2dfacbc694ff8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_scene"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_scene')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_scene.html">Scene</a></td></tr>
-<tr class="memitem:af6e09d91ebd10ae9cc7c12c39d06386c inherit pub_methods_class_scene" id="r_af6e09d91ebd10ae9cc7c12c39d06386c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#af6e09d91ebd10ae9cc7c12c39d06386c">~Scene</a> ()=default</td></tr>
-<tr class="separator:af6e09d91ebd10ae9cc7c12c39d06386c inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe37a76bc29346ed2c17400b818ba38 inherit pub_methods_class_scene" id="r_aafe37a76bc29346ed2c17400b818ba38"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_scene.html#aafe37a76bc29346ed2c17400b818ba38">~Scene</a> ()=0</td></tr>
+<tr class="separator:aafe37a76bc29346ed2c17400b818ba38 inherit pub_methods_class_scene"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -252,7 +255,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a420058ff12690cb9ae699bb187ae3b1f" id="r_a420058ff12690cb9ae699bb187ae3b1f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a420058ff12690cb9ae699bb187ae3b1f">gameover</a></td></tr>
 <tr class="separator:a420058ff12690cb9ae699bb187ae3b1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>gameplay scene itself with a bouncer and backgrounds </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a7572f4138c1126c93f4c4478ae371c3e" name="a7572f4138c1126c93f4c4478ae371c3e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7572f4138c1126c93f4c4478ae371c3e">&#9670;&#160;</a></span>Action</h2>
 

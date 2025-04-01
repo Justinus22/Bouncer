@@ -1,5 +1,5 @@
 <map id="Button" name="Button">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,135,197,347"/>
+<area shape="rect" id="Node000001" title="basic button template" alt="" coords="5,135,197,347"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="44,5,89,72"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,71,71,110,72,117,66,118,65,111,63,71"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="120,5,155,72"/>

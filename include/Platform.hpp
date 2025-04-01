@@ -4,6 +4,7 @@
 #include <SFML/Graphics.hpp>
 #include "AssetManager.hpp"
 
+/// @brief platform that the bouncer can jump on
 class Platform
 {
 public:

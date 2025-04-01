@@ -104,11 +104,15 @@ $(function(){initNavTree('class_game_state.html',''); initResizable(true); });
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_game_state-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">GameState Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>manage the current scene and update scene on according actions  
+ <a href="#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_game_state_8hpp_source.html">GameState.hpp</a>&gt;</code></p>
 <div class="dynheader">
@@ -116,7 +120,7 @@ Collaboration diagram for GameState:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_state__coll__graph.png" border="0" usemap="#a_game_state_coll__map" alt="Collaboration graph"/></div>
 <map name="a_game_state_coll__map" id="a_game_state_coll__map">
-<area shape="rect" title=" " alt="" coords="193,783,393,1097"/>
+<area shape="rect" title="manage the current scene and update scene on according actions" alt="" coords="193,783,393,1097"/>
 <area shape="rect" href="class_asset_manager.html" title="centraly manage all assest and themes" alt="" coords="87,285,301,720"/>
 <area shape="poly" title=" " alt="" coords="246,719,257,767,251,768,241,721"/>
 <area shape="rect" title=" " alt="" coords="5,5,42,72"/>
@@ -146,6 +150,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acc968ce27b9126c75b5fe484dc2a9663"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad53db5c8baa02228a27693f8e3958c7" id="r_aad53db5c8baa02228a27693f8e3958c7"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad53db5c8baa02228a27693f8e3958c7">getCurrentScene</a> ()</td></tr>
 <tr class="separator:aad53db5c8baa02228a27693f8e3958c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
 <tr class="memitem:a4d3dcae01668a2c0b479ad1f7821da02" id="r_a4d3dcae01668a2c0b479ad1f7821da02"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d3dcae01668a2c0b479ad1f7821da02">handleMainMenuAction</a> (<a class="el" href="class_main_menu.html#a28f1197c471428ef44b4e859deb86422">MainMenu::Action</a> action)</td></tr>
 <tr class="separator:a4d3dcae01668a2c0b479ad1f7821da02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9c484a0439b180af0364d7ae3799e04" id="r_ac9c484a0439b180af0364d7ae3799e04"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac9c484a0439b180af0364d7ae3799e04">handleGameOverAction</a> (<a class="el" href="class_game_over.html#a8083b23a9d70ab5a08dc425c43860830">GameOver::Action</a> action)</td></tr>
@@ -158,7 +165,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:af8dab37668f864fb127fca07f6381d98" id="r_af8dab37668f864fb127fca07f6381d98"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="class_scene.html">Scene</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8dab37668f864fb127fca07f6381d98">currentScene</a></td></tr>
 <tr class="separator:af8dab37668f864fb127fca07f6381d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>manage the current scene and update scene on according actions </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4fa0a2bf50315c4a35a3890a0adcee5c" name="a4fa0a2bf50315c4a35a3890a0adcee5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4fa0a2bf50315c4a35a3890a0adcee5c">&#9670;&#160;</a></span>GameState()</h2>
 
@@ -216,6 +225,9 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void GameState::handleGameOverAction </td>
@@ -224,6 +236,11 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -233,6 +250,9 @@ Private Attributes</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void GameState::handleMainMenuAction </td>
@@ -241,6 +261,11 @@ Private Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>

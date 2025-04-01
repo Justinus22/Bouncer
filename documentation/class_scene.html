@@ -109,18 +109,21 @@ $(function(){initNavTree('class_scene.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 
+<p>abstract class for a scene that can be displayed  
+ <a href="#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_scene_8hpp_source.html">Scene.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_scene__inherit__graph.png" border="0" usemap="#a_scene_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_scene_inherit__map" id="a_scene_inherit__map">
-<area shape="rect" title=" " alt="" coords="258,5,470,178"/>
-<area shape="rect" href="class_game_over.html" title=" " alt="" coords="5,466,215,871"/>
+<area shape="rect" title="abstract class for a scene that can be displayed" alt="" coords="258,5,470,178"/>
+<area shape="rect" href="class_game_over.html" title="gameover scene displaying score" alt="" coords="5,466,215,871"/>
 <area shape="poly" title=" " alt="" coords="256,190,230,227,201,284,177,345,158,407,143,467,137,466,152,405,172,343,196,282,225,224,252,187"/>
-<area shape="rect" href="class_gameplay.html" title=" " alt="" coords="240,226,488,1111"/>
+<area shape="rect" href="class_gameplay.html" title="gameplay scene itself with a bouncer and backgrounds" alt="" coords="240,226,488,1111"/>
 <area shape="poly" title=" " alt="" coords="366,193,366,226,361,226,361,193"/>
-<area shape="rect" href="class_main_menu.html" title=" " alt="" coords="512,415,730,922"/>
+<area shape="rect" href="class_main_menu.html" title="main menu scene where you can start the game or exit it" alt="" coords="512,415,730,922"/>
 <area shape="poly" title=" " alt="" coords="476,187,502,224,526,269,547,317,579,415,574,416,542,319,521,272,497,227,471,191"/>
 </map>
 </div>
@@ -129,14 +132,14 @@ Collaboration diagram for Scene:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_scene__coll__graph.png" border="0" usemap="#a_scene_coll__map" alt="Collaboration graph"/></div>
 <map name="a_scene_coll__map" id="a_scene_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,217,178"/>
+<area shape="rect" title="abstract class for a scene that can be displayed" alt="" coords="5,5,217,178"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:af6e09d91ebd10ae9cc7c12c39d06386c" id="r_af6e09d91ebd10ae9cc7c12c39d06386c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af6e09d91ebd10ae9cc7c12c39d06386c">~Scene</a> ()=default</td></tr>
-<tr class="separator:af6e09d91ebd10ae9cc7c12c39d06386c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aafe37a76bc29346ed2c17400b818ba38" id="r_aafe37a76bc29346ed2c17400b818ba38"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafe37a76bc29346ed2c17400b818ba38">~Scene</a> ()=0</td></tr>
+<tr class="separator:aafe37a76bc29346ed2c17400b818ba38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85ba5d5098a2ae93a80edae29ee6294e" id="r_a85ba5d5098a2ae93a80edae29ee6294e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a85ba5d5098a2ae93a80edae29ee6294e">update</a> (sf::Time dt)=0</td></tr>
 <tr class="separator:a85ba5d5098a2ae93a80edae29ee6294e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1116bff0940f9eb45d7ec672a7c0ed7c" id="r_a1116bff0940f9eb45d7ec672a7c0ed7c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1116bff0940f9eb45d7ec672a7c0ed7c">render</a> (sf::RenderWindow &amp;window)=0</td></tr>
@@ -144,9 +147,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad86a23d4a3fa8401dfd8e62d7ada0185" id="r_ad86a23d4a3fa8401dfd8e62d7ada0185"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad86a23d4a3fa8401dfd8e62d7ada0185">handleEvents</a> (sf::RenderWindow &amp;window)=0</td></tr>
 <tr class="separator:ad86a23d4a3fa8401dfd8e62d7ada0185"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="af6e09d91ebd10ae9cc7c12c39d06386c" name="af6e09d91ebd10ae9cc7c12c39d06386c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af6e09d91ebd10ae9cc7c12c39d06386c">&#9670;&#160;</a></span>~Scene()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>abstract class for a scene that can be displayed </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="aafe37a76bc29346ed2c17400b818ba38" name="aafe37a76bc29346ed2c17400b818ba38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafe37a76bc29346ed2c17400b818ba38">&#9670;&#160;</a></span>~Scene()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +168,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel virtual">virtual</span><span class="mlabel default">default</span></span>  </td>
+<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">

@@ -2,7 +2,7 @@
 <area shape="rect" id="Node000001" title="main application that handles the game loop" alt="" coords="100,1160,262,1363"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="90,907,190,973"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,973,168,1143,163,1144,141,974"/>
-<area shape="rect" id="Node000003" href="$class_game_state.html" title=" " alt="" coords="213,783,413,1097"/>
+<area shape="rect" id="Node000003" href="$class_game_state.html" title="manage the current scene and update scene on according actions" alt="" coords="213,783,413,1097"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="251,1098,232,1145,227,1143,246,1096"/>
 <area shape="rect" id="Node000004" href="$class_asset_manager.html" title="centraly manage all assest and themes" alt="" coords="87,285,301,720"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="244,720,255,759,257,766,252,768,250,760,239,721"/>

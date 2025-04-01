@@ -12,6 +12,7 @@
 #include <optional>
 #include "AssetManager.hpp"
 
+/// @brief gameplay scene itself with a bouncer and backgrounds
 class Gameplay : public Scene
 {
 public:

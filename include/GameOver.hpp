@@ -5,6 +5,7 @@
 #include "Button.hpp"
 #include <SFML/Graphics.hpp>
 
+/// @brief gameover scene displaying score
 class GameOver : public Scene
 {
 public:

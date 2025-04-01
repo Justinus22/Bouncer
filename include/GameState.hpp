@@ -4,6 +4,7 @@
 #include "MainMenu.hpp"
 #include "GameOver.hpp"
 
+/// @brief manage the current scene and update scene on according actions
 class GameState
 {
 public:
@@ -14,10 +15,10 @@ public:
     void handleEvents(sf::RenderWindow &window);
     std::shared_ptr<Scene> getCurrentScene();
 
+private:
     void handleMainMenuAction(MainMenu::Action action);
     void handleGameOverAction(GameOver::Action action);
 
-private:
     AssetManager assetManager;
 
     std::shared_ptr<Scene> currentScene;

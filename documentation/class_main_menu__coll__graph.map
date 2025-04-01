@@ -1,10 +1,10 @@
 <map id="MainMenu" name="MainMenu">
-<area shape="rect" id="Node000001" title=" " alt="" coords="441,425,641,738"/>
-<area shape="rect" id="Node000002" href="$class_scene.html" title=" " alt="" coords="5,154,217,327"/>
+<area shape="rect" id="Node000001" title="main menu scene where you can start the game or exit it" alt="" coords="441,425,641,738"/>
+<area shape="rect" id="Node000002" href="$class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="5,154,217,327"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,336,249,399,296,435,345,469,442,527,439,532,343,474,293,440,246,403,183,340"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="438,5,473,72"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="438,46,403,55,359,72,315,99,296,116,281,136,255,191,250,215,249,239,258,288,281,346,309,394,345,438,386,477,429,510,425,514,383,481,341,442,305,397,276,348,253,289,243,239,245,214,250,189,276,133,292,112,312,94,356,67,401,50,437,41"/>
-<area shape="rect" id="Node000005" href="$class_button.html" title=" " alt="" coords="445,135,637,347"/>
+<area shape="rect" id="Node000005" href="$class_button.html" title="basic button template" alt="" coords="445,135,637,347"/>
 <area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="471,70,492,118,487,120,466,72"/>
 <area shape="rect" id="Node000004" title=" " alt="" coords="602,5,647,72"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="640,71,647,95,657,158,661,225,659,290,651,347,632,410,627,409,646,346,654,290,656,225,652,159,642,96,635,72"/>

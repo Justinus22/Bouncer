@@ -1,9 +1,9 @@
 <map id="Scene" name="Scene">
-<area shape="rect" id="Node000001" title=" " alt="" coords="258,5,470,178"/>
-<area shape="rect" id="Node000002" href="$class_game_over.html" title=" " alt="" coords="5,466,215,871"/>
+<area shape="rect" id="Node000001" title="abstract class for a scene that can be displayed" alt="" coords="258,5,470,178"/>
+<area shape="rect" id="Node000002" href="$class_game_over.html" title="gameover scene displaying score" alt="" coords="5,466,215,871"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="256,190,230,227,201,284,177,345,158,407,143,467,137,466,152,405,172,343,196,282,225,224,252,187"/>
-<area shape="rect" id="Node000003" href="$class_gameplay.html" title=" " alt="" coords="240,226,488,1111"/>
+<area shape="rect" id="Node000003" href="$class_gameplay.html" title="gameplay scene itself with a bouncer and backgrounds" alt="" coords="240,226,488,1111"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="366,193,366,226,361,226,361,193"/>
-<area shape="rect" id="Node000004" href="$class_main_menu.html" title=" " alt="" coords="512,415,730,922"/>
+<area shape="rect" id="Node000004" href="$class_main_menu.html" title="main menu scene where you can start the game or exit it" alt="" coords="512,415,730,922"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="476,187,502,224,526,269,547,317,579,415,574,416,542,319,521,272,497,227,471,191"/>
 </map>

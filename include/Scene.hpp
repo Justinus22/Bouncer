@@ -3,10 +3,11 @@
 
 #include <SFML/Graphics.hpp>
 
+/// @brief abstract class for a scene that can be displayed
 class Scene
 {
 public:
-    virtual ~Scene() = default;
+    virtual ~Scene() = 0;
     virtual void update(sf::Time dt) = 0;
     virtual void render(sf::RenderWindow &window) = 0;
     virtual void handleEvents(sf::RenderWindow &window) = 0;

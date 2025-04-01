@@ -1,9 +1,9 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$class_scene.html" title=" " alt="" coords="5,55,64,80"/>
-<area shape="rect" id="Node000001" href="$class_game_over.html" title=" " alt="" coords="112,5,196,31"/>
+<area shape="rect" id="Node000000" href="$class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="5,55,64,80"/>
+<area shape="rect" id="Node000001" href="$class_game_over.html" title="gameover scene displaying score" alt="" coords="112,5,196,31"/>
 <area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="77,47,120,29,122,34,79,52"/>
-<area shape="rect" id="Node000002" href="$class_gameplay.html" title=" " alt="" coords="114,55,194,80"/>
+<area shape="rect" id="Node000002" href="$class_gameplay.html" title="gameplay scene itself with a bouncer and backgrounds" alt="" coords="114,55,194,80"/>
 <area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="79,65,113,65,113,70,79,70"/>
-<area shape="rect" id="Node000003" href="$class_main_menu.html" title=" " alt="" coords="113,104,194,130"/>
+<area shape="rect" id="Node000003" href="$class_main_menu.html" title="main menu scene where you can start the game or exit it" alt="" coords="113,104,194,130"/>
 <area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="79,83,122,101,120,106,77,88"/>
 </map>

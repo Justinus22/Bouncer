@@ -4,6 +4,7 @@
 #include "Button.hpp"
 #include <SFML/Graphics.hpp>
 
+/// @brief main menu scene where you can start the game or exit it
 class MainMenu : public Scene
 {
 public:

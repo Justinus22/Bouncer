@@ -25,7 +25,6 @@ GameOver::GameOver(AssetManager &assetManager, int score, float backgroundSplitX
 void GameOver::update(sf::Time dt)
 {
 }
-
 void GameOver::render(sf::RenderWindow &window)
 {
     window.draw(backgroundSpriteLeft);

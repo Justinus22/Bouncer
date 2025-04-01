@@ -5,6 +5,7 @@
 #include "Platform.hpp"
 #include "AssetManager.hpp"
 
+/// @brief for generating new platforms, holds all data needed for that
 class PlatformGenerator
 {
 public:
