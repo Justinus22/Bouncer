@@ -1,0 +1,36 @@
+var class_gameplay =
+[
+    [ "Action", "class_gameplay.html#a7572f4138c1126c93f4c4478ae371c3e", [
+      [ "MOVE_RIGHT", "class_gameplay.html#a7572f4138c1126c93f4c4478ae371c3ea3dc5ed1f827e8c9a6392edb90af992d5", null ],
+      [ "MOVE_DOWN", "class_gameplay.html#a7572f4138c1126c93f4c4478ae371c3ea8b32429247158c80deab773f4e04e1c2", null ]
+    ] ],
+    [ "Gameplay", "class_gameplay.html#a5db0da63254c80b759868a554fb25415", null ],
+    [ "~Gameplay", "class_gameplay.html#aa18a2cc09f9c30d9a6bd7c8f1bc55980", null ],
+    [ "addNewBackgroundIfNeeded", "class_gameplay.html#a76dbcbd35b1cd0c6bb9f8137e051b1b6", null ],
+    [ "getBackgroundSplitXPosition", "class_gameplay.html#a8404fbad7ae015ab8e8655c8fd671837", null ],
+    [ "getBouncerIntersectionWithPlatformBelow", "class_gameplay.html#a13bea857d160718811bed29c27e28416", null ],
+    [ "getGameActionQueue", "class_gameplay.html#af2bf477b5b550d9c5b2dfacbc694ff8b", null ],
+    [ "getScore", "class_gameplay.html#a3bddee9348d4a99d308523d8613f74be", null ],
+    [ "handleEvents", "class_gameplay.html#a58df6a07d9f04cba4dd2b4569ff168b5", null ],
+    [ "increaseScore", "class_gameplay.html#a32176b1c7477f47e1ae13bea9279061e", null ],
+    [ "isGameover", "class_gameplay.html#ac8d85ce16703f92be41f81a74546875e", null ],
+    [ "moveSceneToRight", "class_gameplay.html#adbebf1dab1db862b571e8b8d65c3bfdc", null ],
+    [ "removeUnseenBackground", "class_gameplay.html#a2d188c5ffd2e74bb9a63c02e5618f160", null ],
+    [ "removeUnseenPlatforms", "class_gameplay.html#a9297b3e3b909f16d03401d80446a2282", null ],
+    [ "removeUnseenSprites", "class_gameplay.html#aa81bcf34717135352be9e03c8ebfea10", null ],
+    [ "render", "class_gameplay.html#a9f7cd78cf932ad88656a8142e9f45fa6", null ],
+    [ "update", "class_gameplay.html#a7c63acdce01519441b0e753f074813ce", null ],
+    [ "updateStateByActionsQueue", "class_gameplay.html#a1cae2d099cf18c5ccd63dd6b11358c1e", null ],
+    [ "assetManager", "class_gameplay.html#aceb2cd95b3bac2dc261bdeeb8c69748d", null ],
+    [ "BACKGROUND_PX_MOVE_PER_SEC", "class_gameplay.html#aca4899576abe54b42cd8d1c032517f0b", null ],
+    [ "backgroundSprites", "class_gameplay.html#aee16b668ab2629ce76982e7d2b758e1c", null ],
+    [ "bouncer", "class_gameplay.html#a06e437a57d799842d778bed8dd0b0aec", null ],
+    [ "font", "class_gameplay.html#a5b1b8226a6e1cd5474b94db52fcdae7d", null ],
+    [ "gameActions", "class_gameplay.html#a5f635b97c6a67a88aecaa02ef01fc44a", null ],
+    [ "gameover", "class_gameplay.html#a420058ff12690cb9ae699bb187ae3b1f", null ],
+    [ "PLATFORM_PX_MOVE_PER_SEC", "class_gameplay.html#af71cff02905f81df1376b77902dfe1b8", null ],
+    [ "platformGenerator", "class_gameplay.html#a70ba9bdd6d4a1e12b4e14f042a754bbe", null ],
+    [ "platforms", "class_gameplay.html#a82c6d90c3fe850ceb4b78699986d0fa9", null ],
+    [ "score", "class_gameplay.html#aa59c32cb11eaf611b765cdbda1eb5964", null ],
+    [ "scoreText", "class_gameplay.html#ababdd04879bd290142e211121c424187", null ]
+];

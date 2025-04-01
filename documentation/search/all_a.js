@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['mainmenu_2',['MainMenu',['../class_main_menu.html',1,'MainMenu'],['../class_main_menu.html#afaf1bef0ab9575d3658fad4f68180d3c',1,'MainMenu::MainMenu()']]],
+  ['mainmenu_2ecpp_3',['MainMenu.cpp',['../_main_menu_8cpp.html',1,'']]],
+  ['mainmenu_2ehpp_4',['MainMenu.hpp',['../_main_menu_8hpp.html',1,'']]],
+  ['max_5flife_5',['MAX_LIFE',['../class_platform.html#a431be389dfb7378bfc1837ba603cddfd',1,'Platform']]],
+  ['maxdistancetonextplatform_6',['maxDistanceToNextPlatform',['../class_platform_generator.html#a61cd0472e95034a076ad32a27f26c175',1,'PlatformGenerator']]],
+  ['maxplatformheight_7',['maxPlatformHeight',['../class_platform_generator.html#a764ce5c0ffb7a13330ce26d64d9a8afa',1,'PlatformGenerator']]],
+  ['mindistancetonextplatform_8',['minDistanceToNextPlatform',['../class_platform_generator.html#a36230f445f13f2134718ea77e2e065e3',1,'PlatformGenerator']]],
+  ['minplatformhight_9',['minPlatformHight',['../class_platform_generator.html#a24d3449d90ab6bd16e73b0ee913f2933',1,'PlatformGenerator']]],
+  ['move_5fdown_10',['MOVE_DOWN',['../class_gameplay.html#a7572f4138c1126c93f4c4478ae371c3ea8b32429247158c80deab773f4e04e1c2',1,'Gameplay']]],
+  ['move_5fright_11',['MOVE_RIGHT',['../class_gameplay.html#a7572f4138c1126c93f4c4478ae371c3ea3dc5ed1f827e8c9a6392edb90af992d5',1,'Gameplay']]],
+  ['moveinstructionsprite_12',['moveInstructionSprite',['../class_main_menu.html#a787dab56de67b14c39aaf8029ecb070c',1,'MainMenu']]],
+  ['moveinstructiontext_13',['moveInstructionText',['../class_main_menu.html#a7d7aeefd69253dbfda3fa5b3aba98e81',1,'MainMenu']]],
+  ['moveinstructiontexture_14',['moveInstructionTexture',['../class_asset_manager.html#a80d2b8eb5bb8a03985d97c9be8863899',1,'AssetManager']]],
+  ['movescenetoright_15',['moveSceneToRight',['../class_gameplay.html#adbebf1dab1db862b571e8b8d65c3bfdc',1,'Gameplay']]]
+];
