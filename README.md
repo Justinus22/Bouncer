@@ -22,8 +22,8 @@ Execute the project by running the compiled file:
 
 ## Build
 
-A build is included under ./prebuild compiled on macOS 15.3.1 (24D70) (Apple M2 Pro Chip, ARM-based) with cmake version 3.28.1.
-(execute from root folder)
+A build is included under ./releasebuild compiled on macOS 15.3.1 (24D70) (Apple M2 Pro Chip, ARM-based) with cmake version 3.28.1.
+(execute from root folder, otherwise the assets wont be loaded correctly, because they are not part of the build)
 
 
 ## Third Party Services
