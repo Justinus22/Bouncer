@@ -1,5 +1,5 @@
 <map id="GameOver" name="GameOver">
-<area shape="rect" id="Node000001" title="gameover scene displaying score" alt="" coords="6,226,216,630"/>
-<area shape="rect" id="Node000002" href="$class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="5,5,217,178"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,193,114,226,109,226,109,193"/>
+<area shape="rect" id="Node000001" title="gameover scene displaying score" alt="" coords="6,205,216,610"/>
+<area shape="rect" id="Node000002" href="$class_scene.html" title="abstract class for a scene that can be displayed" alt="" coords="5,5,217,157"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="114,172,114,206,109,206,109,172"/>
 </map>

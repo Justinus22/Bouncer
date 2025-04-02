@@ -5,7 +5,6 @@ var class_gameplay =
       [ "MOVE_DOWN", "class_gameplay.html#a7572f4138c1126c93f4c4478ae371c3ea8b32429247158c80deab773f4e04e1c2", null ]
     ] ],
     [ "Gameplay", "class_gameplay.html#a5db0da63254c80b759868a554fb25415", null ],
-    [ "~Gameplay", "class_gameplay.html#aa18a2cc09f9c30d9a6bd7c8f1bc55980", null ],
     [ "addNewBackgroundIfNeeded", "class_gameplay.html#a76dbcbd35b1cd0c6bb9f8137e051b1b6", null ],
     [ "getBackgroundSplitXPosition", "class_gameplay.html#a8404fbad7ae015ab8e8655c8fd671837", null ],
     [ "getBouncerIntersectionWithPlatformBelow", "class_gameplay.html#a13bea857d160718811bed29c27e28416", null ],

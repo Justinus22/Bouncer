@@ -1,0 +1,14 @@
+# Target labels
+ vorbis-populate
+# Source files and their labels
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/CMakeFiles/vorbis-populate
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/CMakeFiles/vorbis-populate.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/CMakeFiles/vorbis-populate-complete.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-build.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-configure.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-download.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-install.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-mkdir.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-patch.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-test.rule
+/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/vorbis-subbuild/vorbis-populate-prefix/src/vorbis-populate-stamp/vorbis-populate-update.rule

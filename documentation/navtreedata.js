@@ -25,8 +25,10 @@
 var NAVTREE =
 [
   [ "Bouncer", "index.html", [
-    [ "Build", "index.html#autotoc_md1", null ],
-    [ "Third Party Services", "index.html#autotoc_md2", null ],
+    [ "BOUNCER", "index.html#autotoc_md0", [
+      [ "Build", "index.html#autotoc_md1", null ],
+      [ "Third Party Services", "index.html#autotoc_md2", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [

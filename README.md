@@ -6,6 +6,7 @@
 Bounce as many times as you can! But... don't fall down.
 
 Compile the project with cmake by running these commands in the root folder of the repo.
+(execute all commands from the directory this README is in, because otherwise the assets won't be loaded correctly)
 
 ```bash
 $ cmake -B build
@@ -22,6 +23,7 @@ Execute the project by running the compiled file:
 ## Build
 
 A build is included under ./prebuild compiled on macOS 15.3.1 (24D70) (Apple M2 Pro Chip, ARM-based) with cmake version 3.28.1.
+(execute from root folder)
 
 
 ## Third Party Services

@@ -7,7 +7,6 @@
 class Scene
 {
 public:
-    virtual ~Scene() = 0;
     virtual void update(sf::Time dt) = 0;
     virtual void render(sf::RenderWindow &window) = 0;
     virtual void handleEvents(sf::RenderWindow &window) = 0;

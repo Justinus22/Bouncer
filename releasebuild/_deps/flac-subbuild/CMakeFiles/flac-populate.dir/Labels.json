@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/CMakeFiles/flac-populate"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/CMakeFiles/flac-populate.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/CMakeFiles/flac-populate-complete.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-build.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-configure.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-download.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-install.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-mkdir.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-patch.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-test.rule"
+		},
+		{
+			"file" : "/Users/i589228/data/hwr/s4/c++/Bouncer/Release/_deps/flac-subbuild/flac-populate-prefix/src/flac-populate-stamp/flac-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"flac-populate"
+		],
+		"name" : "flac-populate"
+	}
+}

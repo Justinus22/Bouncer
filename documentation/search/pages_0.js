@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bouncer_0',['BOUNCER',['../index.html',1,'']]]
+  ['bouncer_0',['Bouncer',['../index.html',1,'']]]
 ];
